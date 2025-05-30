@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Clientes</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .client-list {
+            list-style: none;
+        }
+        
+        .client-item {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .client-item:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .client-item.active {
+            background-color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 3px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: var(--success);
+            transition: width 0.3s;
+        }
+        
+        .main-content {
+            padding: 30px;
+            overflow-y: auto;
+        }
+        
+        .client-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .client-title {
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .completion {
+            background-color: var(--light);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .form-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        
+        .form-section h3 {
+            margin-bottom: 15px;
+            color: var(--secondary);
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .color-preview {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .color-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+        
+        .logo-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .logo-box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        
+        .logo-box img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .array-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        .array-item .form-control {
+            flex: 1;
+        }
+        
+        .btn-sm {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        
+        .btn-danger {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        .btn-success {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .empty-field {
+            background-color: #fff8e1;
+        }
+        
+        .save-status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            display: none;
+        }
+        
+        .save-success {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: var(--success);
+        }
+        
+        .media-preview {
+            max-width: 200px;
+            max-height: 150px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Clientes</h2>
+            <ul class="client-list" id="clientList">
+                <!-- Client items will be added here by JavaScript -->
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="client-header">
+                <h1 class="client-title" id="clientTitle">Seleccione un cliente</h1>
+                <div class="completion" id="completionPercentage">0% completado</div>
+            </div>
+            
+            <div id="clientForm" style="display: none;">
+                <div class="form-grid">
+                    <div class="form-section">
+                        <h3>Información Básica</h3>
+                        <div class="form-group">
+                            <label for="name">Nombre de la empresa</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="folderName">Nombre de carpeta</label>
+                            <input type="text" class="form-control" id="folderName" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="slogan">Slogan</label>
+                            <input type="text" class="form-control" id="slogan">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Ubicación</label>
+                            <input type="text" class="form-control" id="location">
+                        </div>
+                        <div class="form-group">
+                            <label for="mapsLink">Enlace de Google Maps</label>
+                            <input type="url" class="form-control" id="mapsLink">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Descripción y Servicios</h3>
+                        <div class="form-group">
+                            <label for="about">Acerca de la empresa</label>
+                            <textarea class="form-control" id="about"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Servicios</label>
+                            <div id="servicesContainer">
+                                <!-- Services will be added here -->
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm" id="addService">+ Añadir servicio</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Contacto</h3>
+                        <div class="form-group">
+                            <label>Teléfonos</label>
+                            <div id="phonesContainer">
+                                <!-- Phones will be added here -->
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm" id="addPhone">+ Añadir teléfono</button>
+                        </div>
+                        <div class="form-group">
+                            <label>Correos electrónicos</label>
+                            <div id="emailsContainer">
+                                <!-- Emails will be added here -->
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm" id="addEmail">+ Añadir email</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Redes Sociales</h3>
+                        <div class="form-group">
+                            <label for="facebook">Facebook</label>
+                            <input type="url" class="form-control" id="facebook">
+                        </div>
+                        <div class="form-group">
+                            <label for="instagram">Instagram</label>
+                            <input type="url" class="form-control" id="instagram">
+                        </div>
+                        <div class="form-group">
+                            <label for="tiktok">TikTok</label>
+                            <input type="url" class="form-control" id="tiktok">
+                        </div>
+                        <div class="form-group">
+                            <label for="youtube">YouTube</label>
+                            <input type="url" class="form-control" id="youtube">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Sitio web</label>
+                            <input type="url" class="form-control" id="website">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Diseño y Branding</h3>
+                        <div class="form-group">
+                            <label for="primaryColor">Color primario</label>
+                            <input type="color" class="form-control" id="primaryColor" style="height: 40px; padding: 3px;">
+                            <div class="color-preview">
+                                <div class="color-box" id="primaryColorPreview"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="accentColor">Color de acento</label>
+                            <input type="color" class="form-control" id="accentColor" style="height: 40px; padding: 3px;">
+                            <div class="color-preview">
+                                <div class="color-box" id="accentColorPreview"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Archivos Multimedia</h3>
+                        <div class="form-group">
+                            <label for="profileImage">Imagen de perfil</label>
+                            <input type="text" class="form-control" id="profileImage" readonly>
+                            <img src="" alt="Preview" class="media-preview" id="profileImagePreview">
+                        </div>
+                        <div class="form-group">
+                            <label for="logo">Logo principal</label>
+                            <input type="text" class="form-control" id="logo" readonly>
+                            <img src="" alt="Preview" class="media-preview" id="logoPreview">
+                        </div>
+                        <div class="form-group">
+                            <label for="banner">Banner</label>
+                            <input type="text" class="form-control" id="banner" readonly>
+                            <img src="" alt="Preview" class="media-preview" id="bannerPreview">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Logos Variantes</h3>
+                        <div class="form-group">
+                            <label for="blackLogo">Logo negro</label>
+                            <input type="text" class="form-control" id="blackLogo" readonly>
+                            <img src="" alt="Preview" class="media-preview" id="blackLogoPreview">
+                        </div>
+                        <div class="form-group">
+                            <label for="whiteLogo">Logo blanco</label>
+                            <input type="text" class="form-control" id="whiteLogo" readonly>
+                            <img src="" alt="Preview" class="media-preview" id="whiteLogoPreview">
+                        </div>
+                        <div class="form-group">
+                            <label for="primaryLogo">Logo primario</label>
+                            <input type="text" class="form-control" id="primaryLogo" readonly>
+                            <img src="" alt="Preview" class="media-preview" id="primaryLogoPreview">
+                        </div>
+                        <div class="form-group">
+                            <label for="accentLogo">Logo acento</label>
+                            <input type="text" class="form-control" id="accentLogo" readonly>
+                            <img src="" alt="Preview" class="media-preview" id="accentLogoPreview">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Documentos</h3>
+                        <div class="form-group">
+                            <label for="brochure">Brochure</label>
+                            <input type="text" class="form-control" id="brochure" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="card">Tarjeta de presentación</label>
+                            <input type="text" class="form-control" id="card" readonly>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <button type="button" class="btn btn-primary" id="saveClient">Guardar Cambios</button>
+                    <div class="save-status" id="saveStatus"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fetch data from data.json
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const clients = data;
+                let currentClient = null;
+                
+                // DOM elements
+                const clientList = document.getElementById('clientList');
+                const clientTitle = document.getElementById('clientTitle');
+                const completionPercentage = document.getElementById('completionPercentage');
+                const clientForm = document.getElementById('clientForm');
+                
+                // Render client list
+                function renderClientList() {
+                    clientList.innerHTML = '';
+                    clients.forEach(client => {
+                        const completion = calculateCompletion(client);
+                        
+                        const li = document.createElement('li');
+                        li.className = 'client-item';
+                        if (currentClient && client.folderName === currentClient.folderName) {
+                            li.classList.add('active');
+                        }
+                        li.innerHTML = `
+                            <span>${client.name || 'Sin nombre'}</span>
+                            <span>${completion}%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${completion}%"></div>
+                            </div>
+                        `;
+                        li.addEventListener('click', () => loadClient(client));
+                        clientList.appendChild(li);
+                    });
+                }
+                
+                // Calculate completion percentage
+                function calculateCompletion(client) {
+                    const fields = [
+                        'name', 'slogan', 'about', 'services', 'phones', 'emails',
+                        'facebook', 'instagram', 'tiktok', 'youtube', 'website',
+                        'location', 'primaryColor', 'accentColor'
+                    ];
+                    
+                    let completed = 0;
+                    fields.forEach(field => {
+                        if (Array.isArray(client[field])) {
+                            if (client[field].length > 0 && client[field][0] !== '') {
+                                completed++;
+                            }
+                        } else if (client[field] && client[field] !== '') {
+                            completed++;
+                        }
+                    });
+                    
+                    return Math.round((completed / fields.length) * 100);
+                }
+                
+                // Load client data into form
+                function loadClient(client) {
+                    currentClient = client;
+                    renderClientList();
+                    
+                    clientTitle.textContent = client.name || 'Cliente sin nombre';
+                    completionPercentage.textContent = `${calculateCompletion(client)}% completado`;
+                    clientForm.style.display = 'block';
+                    
+                    // Basic info
+                    document.getElementById('name').value = client.name || '';
+                    document.getElementById('folderName').value = client.folderName || '';
+                    document.getElementById('slogan').value = client.slogan || '';
+                    document.getElementById('location').value = client.location || '';
+                    document.getElementById('mapsLink').value = client.mapsLink || '';
+                    
+                    // About and services
+                    document.getElementById('about').value = client.about || '';
+                    renderArrayField('services', client.services, 'servicesContainer');
+                    
+                    // Contact
+                    renderArrayField('phones', client.phones, 'phonesContainer');
+                    renderArrayField('emails', client.emails, 'emailsContainer');
+                    
+                    // Social media
+                    document.getElementById('facebook').value = client.facebook || '';
+                    document.getElementById('instagram').value = client.instagram || '';
+                    document.getElementById('tiktok').value = client.tiktok || '';
+                    document.getElementById('youtube').value = client.youtube || '';
+                    document.getElementById('website').value = client.website || '';
+                    
+                    // Design
+                    document.getElementById('primaryColor').value = client.primaryColor || '#000000';
+                    document.getElementById('accentColor').value = client.accentColor || '#000000';
+                    document.getElementById('primaryColorPreview').style.backgroundColor = client.primaryColor || 'transparent';
+                    document.getElementById('accentColorPreview').style.backgroundColor = client.accentColor || 'transparent';
+                    
+                    // Media
+                    updateMediaPreview('profileImage', client.profileImage);
+                    updateMediaPreview('logo', client.logo);
+                    updateMediaPreview('banner', client.banner);
+                    updateMediaPreview('blackLogo', client.blackLogo);
+                    updateMediaPreview('whiteLogo', client.whiteLogo);
+                    updateMediaPreview('primaryLogo', client.primaryLogo);
+                    updateMediaPreview('accentLogo', client.accentLogo);
+                    
+                    // Documents
+                    document.getElementById('brochure').value = client.brochure || '';
+                    document.getElementById('card').value = client.card || '';
+                    
+                    // Highlight empty fields
+                    highlightEmptyFields();
+                }
+                
+                // Render array fields (services, phones, emails)
+                function renderArrayField(fieldName, array, containerId) {
+                    const container = document.getElementById(containerId);
+                    container.innerHTML = '';
+                    
+                    if (!array || array.length === 0) {
+                        array = [''];
+                    }
+                    
+                    array.forEach((item, index) => {
+                        const div = document.createElement('div');
+                        div.className = 'array-item';
+                        if (item === '') {
+                            div.classList.add('empty-field');
+                        }
+                        
+                        div.innerHTML = `
+                            <input type="${fieldName === 'emails' ? 'email' : 'text'}" 
+                                   class="form-control ${fieldName}-item" 
+                                   value="${item}" 
+                                   data-index="${index}">
+                            <button type="button" class="btn btn-danger btn-sm remove-item" data-field="${fieldName}" data-index="${index}">×</button>
+                        `;
+                        
+                        container.appendChild(div);
+                    });
+                }
+                
+                // Update media preview
+                function updateMediaPreview(elementId, path) {
+                    const input = document.getElementById(elementId);
+                    const preview = document.getElementById(elementId + 'Preview');
+                    
+                    if (input && preview) {
+                        input.value = path || '';
+                        if (path) {
+                            preview.src = path;
+                            preview.style.display = 'block';
+                        } else {
+                            preview.style.display = 'none';
+                        }
+                    }
+                }
+                
+                // Highlight empty fields
+                function highlightEmptyFields() {
+                    document.querySelectorAll('.form-control').forEach(input => {
+                        if (input.value === '' && !input.readOnly) {
+                            input.classList.add('empty-field');
+                        } else {
+                            input.classList.remove('empty-field');
+                        }
+                    });
+                }
+                
+                // Save client data
+                function saveClient() {
+                    if (!currentClient) return;
+                    
+                    // Basic info
+                    currentClient.name = document.getElementById('name').value;
+                    currentClient.slogan = document.getElementById('slogan').value;
+                    currentClient.location = document.getElementById('location').value;
+                    currentClient.mapsLink = document.getElementById('mapsLink').value;
+                    
+                    // About and services
+                    currentClient.about = document.getElementById('about').value;
+                    currentClient.services = getArrayValues('services');
+                    
+                    // Contact
+                    currentClient.phones = getArrayValues('phones');
+                    currentClient.emails = getArrayValues('emails');
+                    
+                    // Social media
+                    currentClient.facebook = document.getElementById('facebook').value;
+                    currentClient.instagram = document.getElementById('instagram').value;
+                    currentClient.tiktok = document.getElementById('tiktok').value;
+                    currentClient.youtube = document.getElementById('youtube').value;
+                    currentClient.website = document.getElementById('website').value;
+                    
+                    // Design
+                    currentClient.primaryColor = document.getElementById('primaryColor').value;
+                    currentClient.accentColor = document.getElementById('accentColor').value;
+                    
+                    // Update completion percentage
+                    completionPercentage.textContent = `${calculateCompletion(currentClient)}% completado`;
+                    renderClientList();
+                    
+                    // Show save status
+                    const saveStatus = document.getElementById('saveStatus');
+                    saveStatus.textContent = 'Cambios guardados localmente';
+                    saveStatus.className = 'save-status save-success';
+                    saveStatus.style.display = 'block';
+                    
+                    setTimeout(() => {
+                        saveStatus.style.display = 'none';
+                    }, 3000);
+                    
+                    // Highlight empty fields
+                    highlightEmptyFields();
+                }
+                
+                // Get array values from inputs
+                function getArrayValues(fieldName) {
+                    const items = [];
+                    document.querySelectorAll(`.${fieldName}-item`).forEach(input => {
+                        if (input.value.trim() !== '') {
+                            items.push(input.value.trim());
+                        }
+                    });
+                    return items.length > 0 ? items : [''];
+                }
+                
+                // Event listeners
+                document.getElementById('addService').addEventListener('click', () => {
+                    const container = document.getElementById('servicesContainer');
+                    const div = document.createElement('div');
+                    div.className = 'array-item empty-field';
+                    div.innerHTML = `
+                        <input type="text" class="form-control services-item" value="" data-index="${document.querySelectorAll('.services-item').length}">
+                        <button type="button" class="btn btn-danger btn-sm remove-item" data-field="services" data-index="${document.querySelectorAll('.services-item').length}">×</button>
+                    `;
+                    container.appendChild(div);
+                });
+                
+                document.getElementById('addPhone').addEventListener('click', () => {
+                    const container = document.getElementById('phonesContainer');
+                    const div = document.createElement('div');
+                    div.className = 'array-item empty-field';
+                    div.innerHTML = `
+                        <input type="text" class="form-control phones-item" value="" data-index="${document.querySelectorAll('.phones-item').length}">
+                        <button type="button" class="btn btn-danger btn-sm remove-item" data-field="phones" data-index="${document.querySelectorAll('.phones-item').length}">×</button>
+                    `;
+                    container.appendChild(div);
+                });
+                
+                document.getElementById('addEmail').addEventListener('click', () => {
+                    const container = document.getElementById('emailsContainer');
+                    const div = document.createElement('div');
+                    div.className = 'array-item empty-field';
+                    div.innerHTML = `
+                        <input type="email" class="form-control emails-item" value="" data-index="${document.querySelectorAll('.emails-item').length}">
+                        <button type="button" class="btn btn-danger btn-sm remove-item" data-field="emails" data-index="${document.querySelectorAll('.emails-item').length}">×</button>
+                    `;
+                    container.appendChild(div);
+                });
+                
+                document.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('remove-item')) {
+                        const field = e.target.getAttribute('data-field');
+                        const index = parseInt(e.target.getAttribute('data-index'));
+                        
+                        if (document.querySelectorAll(`.${field}-item`).length > 1) {
+                            e.target.parentElement.remove();
+                        } else {
+                            // If it's the last item, just clear it
+                            const input = e.target.previousElementSibling;
+                            input.value = '';
+                            input.classList.add('empty-field');
+                        }
+                    }
+                });
+                
+                document.getElementById('saveClient').addEventListener('click', saveClient);
+                
+                // Color preview update
+                document.getElementById('primaryColor').addEventListener('input', (e) => {
+                    document.getElementById('primaryColorPreview').style.backgroundColor = e.target.value;
+                });
+                
+                document.getElementById('accentColor').addEventListener('input', (e) => {
+                    document.getElementById('accentColorPreview').style.backgroundColor = e.target.value;
+                });
+                
+                // Initial render
+                renderClientList();
+                
+                // Load first client by default
+                if (clients.length > 0) {
+                    loadClient(clients[0]);
+                }
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+                alert('Error al cargar los datos de los clientes. Por favor verifica que el archivo data.json exista y tenga el formato correcto.');
+            });
+    </script>
+</body>
+</html>
