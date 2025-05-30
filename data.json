@@ -1,0 +1,154 @@
+[
+  {
+    "id": "pv-energy",
+    "name": "PV energy",
+    "slogan": "Iluminamos tu presente, potenciamos tu futuro.",
+    "services": [
+      {
+        "name": "Instalación eléctrica",
+        "icon": "clarity:bolt-solid",
+        "image": "multimedia/pv-energy/instalacion-electrica.png",
+        "description": "Diseño e instalación de sistemas eléctricos para hogares y negocios."
+      },
+      {
+        "name": "Reparación eléctrica",
+        "icon": "mdi:electric-switch",
+        "image": "multimedia/pv-energy/reparacion-electrica.png",
+        "description": "Diagnóstico y reparación de fallas eléctricas, asegurando el correcto funcionamiento."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 989 357 969",
+        "whatsapp": "51989357969",
+        "isPrimaryCta": true,
+        "ctaText": "¡Cotiza por WhatsApp!"
+      }
+    ],
+    "emails": [
+      "energyacdc18@gmail.com"
+    ],
+    "facebook": "https://www.facebook.com/energy.gv",
+    "instagram": "https://www.instagram.com/p/DEpwKG5xkiu/",
+    "tiktok": "https://www.tiktok.com/@expertoelectricista",
+    "youtube": "",
+    "website": "",
+    "brochure": "",
+    "card": "",
+    "location": "Lima, Perú",
+    "mapsLink": "https://maps.app.goo.gl/mKuKNqi48YJ9URpb7",
+    "primaryColor": "#03152A",
+    "accentColor": "#69D6E9",
+    "profileImage": "multimedia/pv-energy/profile.png",
+    "about": "En PV Energy, brindamos soluciones eléctricas confiables y seguras en Lima.  Nuestro compromiso es ofrecer un servicio de calidad para hogares y negocios.",
+    "reliabilityScore": 97,
+    "whyChooseUs": [
+      {
+        "icon": "mdi:account-tie",
+        "title": "Experiencia y Profesionalismo",
+        "text": "Amplia experiencia y un equipo calificado en cada proyecto."
+      },
+      {
+        "icon": "mdi:timer-outline",
+        "title": "Servicio Rápido y Eficiente",
+        "text": "Atención oportuna a consultas y emergencias."
+      },
+      {
+        "icon": "mdi:tag",
+        "title": "Precios Competitivos",
+        "text": "Soluciones a medida con precios justos."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Electricidad",
+    "type": "Técnico",
+    "gender": "Masculino"
+  },
+  {
+    "id": "j&l",
+    "name": "J&L Electro Servicios Generales",
+    "slogan": "Conectamos tus ideas, protegemos tu espacio.",
+    "services": [
+      {
+        "name": "Instalaciones Eléctricas Expertas",
+        "icon": "clarity:bolt-solid",
+        "image": "multimedia/j&l/servicio-electrico-2.png",
+        "description": "Instalación y mantenimiento de sistemas eléctricos."
+      },
+      {
+        "name": "Cercos Eléctricos Seguros",
+        "icon": "mdi:security",
+        "image": "multimedia/j&l/servicio-cerco-2.png",
+        "description": "Protección perimetral con cercos eléctricos."
+      },
+      {
+        "name": "Pintura",
+        "icon": "mdi:format-paint",
+        "image": "multimedia/j&l/servicio-pintura.png",
+        "description": "Servicios de pintura interior y exterior."
+      },
+      {
+        "name": "Cámaras de Seguridad HD",
+        "icon": "clarity:video-camera-solid",
+        "image": "multimedia/j&l/servicio-camara-2.png",
+        "description": "Instalación de sistemas de videovigilancia."
+      },
+      {
+        "name": "Alarmas Inteligentes",
+        "icon": "mdi:bell-ring-outline",
+        "image": "multimedia/j&l/servicio-alarma-2.png",
+        "description": "Sistemas de alarma avanzados."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 955 679 216",
+        "whatsapp": "51955679216",
+        "isPrimaryCta": true,
+        "ctaText": "¡Cotiza por WhatsApp!"
+      },
+      {
+        "number": "+51 923 996 572",
+        "whatsapp": "51923996572",
+        "ctaText": "Consulta por WhatsApp"
+      }
+    ],
+    "emails": [
+      "jylelectrossgg@gmail.com"
+    ],
+    "facebook": "https://www.facebook.com/profile.php?id=100070168122542",
+    "instagram": "https://www.instagram.com/electro_servicios_generales",
+    "tiktok": "",
+    "youtube": "",
+    "website": "",
+    "brochure": "https://mercado-digital-page.github.io/espacio/j&l/brochure/",
+    "card": "https://mercado-digital-page.github.io/espacio/j&l/brochure/",
+    "location": "Piura, Perú",
+    "mapsLink": "https://maps.app.goo.gl/KRGHSEFpBtAecf598",
+    "primaryColor": "#011248",
+    "accentColor": "#fdb500",
+    "about": "J&L Electro Servicios Generales ofrece soluciones integrales en Piura: instalaciones eléctricas, cercos eléctricos, pintura, cámaras y alarmas.  Comprometidos con la calidad para tu hogar o negocio.",
+    "reliabilityScore": 100,
+    "whyChooseUs": [
+      {
+        "icon": "mdi:puzzle-outline",
+        "title": "Servicio Integral",
+        "text": "Cobertura total en electricidad, seguridad y mantenimiento."
+      },
+      {
+        "icon": "mdi:security",
+        "title": "Seguridad Garantizada",
+        "text": "Protección confiable para tu propiedad."
+      },
+      {
+        "icon": "lucide:paint-roller",
+        "title": "Acabados Profesionales",
+        "text": "Estética y calidad en cada proyecto."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Electricidad",
+    "type": "Empresa",
+    "gender": "Femenino"
+  }
+]
