@@ -7,13 +7,13 @@
       {
         "name": "Instalación eléctrica",
         "icon": "clarity:bolt-solid",
-        "image": "../../../admin/clientes/../../../admin/clientes/multimedia/pv-energy/instalacion-electrica.png",
+        "image": "../../../admin/clientes/multimedia/pv-energy/instalacion-electrica.png",
         "description": "Diseño e instalación de sistemas eléctricos para hogares y negocios."
       },
       {
         "name": "Reparación eléctrica",
         "icon": "mdi:electric-switch",
-        "image": "../../../admin/clientes/../../../admin/clientes/multimedia/pv-energy/reparacion-electrica.png",
+        "image": "../../../admin/clientes/multimedia/pv-energy/reparacion-electrica.png",
         "description": "Diagnóstico y reparación de fallas eléctricas, asegurando el correcto funcionamiento."
       }
     ],
