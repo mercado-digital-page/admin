@@ -550,12 +550,6 @@
         "icon": "mdi:electric-switch",
         "image": "../../../admin/clientes/multimedia/pv-energy/reparacion-electrica.png",
         "description": "Diagnóstico y reparación de fallas eléctricas, asegurando el correcto funcionamiento."
-      },
-      {
-        "name": "Mantenimiento Eléctrico",
-        "icon": "mdi:current-ac",
-        "image": "../../../admin/clientes/multimedia/pv-energy/mantenimiento-electrico.png",
-        "description": "Servicios de mantenimiento preventivo para asegurar el buen funcionamiento de tus instalaciones."
       }
     ],
     "phones": [
@@ -602,38 +596,38 @@
     "gender": "Masculino"
   },
   {
-    "id": "j-l",
+    "id": "j&l",
     "name": "J&L Electro Servicios Generales",
     "slogan": "Conectamos tus ideas, protegemos tu espacio.",
     "services": [
       {
         "name": "Instalaciones Eléctricas Expertas",
         "icon": "clarity:bolt-solid",
-        "image": "../../../admin/clientes/multimedia/j-l/servicio-electrico-2.png",
+        "image": "../../../admin/clientes/multimedia/j&l/servicio-electrico-2.png",
         "description": "Instalación y mantenimiento de sistemas eléctricos para hogares y empresas."
       },
       {
         "name": "Cercos Eléctricos Seguros",
         "icon": "mdi:security",
-        "image": "../../../admin/clientes/multimedia/j-l/servicio-cerco-2.png",
+        "image": "../../../admin/clientes/multimedia/j&l/servicio-cerco-2.png",
         "description": "Instalación y mantenimiento de cercos eléctricos para protección perimetral."
       },
       {
         "name": "Pintura Profesional",
         "icon": "mdi:format-paint",
-        "image": "../../../admin/clientes/multimedia/j-l/servicio-pintura.png",
+        "image": "../../../admin/clientes/multimedia/j&l/servicio-pintura.png",
         "description": "Servicios de pintura interior y exterior con acabados de calidad."
       },
       {
         "name": "Cámaras de Seguridad HD",
         "icon": "clarity:video-camera-solid",
-        "image": "../../../admin/clientes/multimedia/j-l/servicio-camara-2.png",
+        "image": "../../../admin/clientes/multimedia/j&l/servicio-camara-2.png",
         "description": "Instalación de sistemas de videovigilancia de alta definición."
       },
       {
         "name": "Alarmas Inteligentes",
         "icon": "mdi:bell-ring-outline",
-        "image": "../../../admin/clientes/multimedia/j-l/servicio-alarma-2.png",
+        "image": "../../../admin/clientes/multimedia/j&l/servicio-alarma-2.png",
         "description": "Instalación de sistemas de alarma avanzados para tu seguridad."
       }
     ],
