@@ -149,5 +149,1044 @@
     "category": "Electricidad",
     "type": "Empresa",
     "gender": "Femenino"
+  },
+  {
+    "id": "constructora-world",
+    "folderName": "constructora-world",
+    "name": "Constructora World",
+    "slogan": "Construyendo tus sueños, cimiento a cimiento.",
+    "services": [
+      {
+        "name": "Diseño Arquitectónico",
+        "icon": "mdi:draw",
+        "description": "Planificación y diseño de espacios funcionales y estéticos."
+      },
+      {
+        "name": "Construcción General",
+        "icon": "mdi:crane",
+        "description": "Ejecución de proyectos de construcción de principio a fin."
+      },
+      {
+        "name": "Remodelación y Ampliación",
+        "icon": "mdi:hammer-wrench",
+        "description": "Transformación y optimización de espacios existentes."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 917 803 097",
+        "whatsapp": "51917803097",
+        "isPrimaryCta": true,
+        "ctaText": "¡Contáctanos por WhatsApp!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/ConstructoraWorldLJM",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/constructoraworld/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/constructora-world/",
+    "card": "https://mercado-digital-page.github.io/espacio/constructora-world/tarjeta",
+    "location": "Lima, Perú",
+    "mapsLink": "",
+    "primaryColor": "#2C3E50",
+    "accentColor": "#3498DB",
+    "profileImage": "multimedia/constructora-world/profile.svg",
+    "blackLogo": "multimedia/constructora-world/logo-negro.svg",
+    "whiteLogo": "multimedia/constructora-world/logo-blanco.svg",
+    "primaryLogo": "multimedia/constructora-world/logo-primario.svg",
+    "accentLogo": "multimedia/constructora-world/logo-accent.svg",
+    "logo": "multimedia/constructora-world/logo.png",
+    "banner": "multimedia/constructora-world/banner.png",
+    "about": "Constructora World es tu aliado en la materialización de proyectos de construcción. Con experiencia y dedicación, transformamos tus ideas en realidades sólidas y duraderas en Lima.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:helmet-safety",
+        "title": "Compromiso y Seguridad",
+        "text": "Priorizamos la seguridad y el cumplimiento en cada etapa del proyecto."
+      },
+      {
+        "icon": "mdi:ruler",
+        "title": "Diseños a Medida",
+        "text": "Creamos espacios que se adaptan a tus necesidades y visión."
+      },
+      {
+        "icon": "mdi:handshake",
+        "title": "Confianza y Transparencia",
+        "text": "Comunicación clara y honesta en cada paso."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Construcción",
+    "type": "Empresa",
+    "gender": "Neutro"
+  },
+  {
+    "id": "kc-construcciones",
+    "folderName": "kc-construcciones",
+    "name": "K.C Construcciones",
+    "slogan": "Edificando calidad, superando expectativas.",
+    "services": [
+      {
+        "name": "Obra Civil",
+        "icon": "mdi:bricks",
+        "description": "Construcción de edificios, viviendas y estructuras de obra civil."
+      },
+      {
+        "name": "Acabados de Construcción",
+        "icon": "mdi:brush",
+        "description": "Servicios de acabados interiores y exteriores de alta calidad."
+      },
+      {
+        "name": "Gestión de Proyectos",
+        "icon": "mdi:clipboard-check",
+        "description": "Planificación, supervisión y control integral de proyectos."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 906 974 085",
+        "whatsapp": "51906974085",
+        "isPrimaryCta": true,
+        "ctaText": "¡Solicita tu cotización!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/profile.php?id=61550804115530",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/kcconstrucciones/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/kc-construcciones/",
+    "card": "https://mercado-digital-page.github.io/espacio/kc-construcciones/tarjeta",
+    "location": "Trujillo, Perú",
+    "mapsLink": "",
+    "primaryColor": "#1A237E",
+    "accentColor": "#00B0FF",
+    "profileImage": "multimedia/kc-construcciones/profile.svg",
+    "blackLogo": "multimedia/kc-construcciones/logo-negro.svg",
+    "whiteLogo": "multimedia/kc-construcciones/logo-blanco.svg",
+    "primaryLogo": "multimedia/kc-construcciones/logo-primario.svg",
+    "accentLogo": "multimedia/kc-construcciones/logo-accent.svg",
+    "logo": "multimedia/kc-construcciones/logo.png",
+    "banner": "multimedia/kc-construcciones/banner.png",
+    "about": "En K.C Construcciones, nos dedicamos a construir con los más altos estándares de calidad. Nuestra experiencia en Trujillo nos permite ofrecer soluciones constructivas innovadoras y eficientes.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:quality-high",
+        "title": "Calidad Garantizada",
+        "text": "Utilizamos materiales de primera y técnicas constructivas avanzadas."
+      },
+      {
+        "icon": "mdi:account-group",
+        "title": "Equipo Profesional",
+        "text": "Contamos con un equipo de profesionales altamente capacitados."
+      },
+      {
+        "icon": "mdi:clock-outline",
+        "title": "Cumplimiento de Plazos",
+        "text": "Entregamos tus proyectos a tiempo y dentro del presupuesto."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Construcción",
+    "type": "Empresa",
+    "gender": "Neutro"
+  },
+  {
+    "id": "maestros-contratistas",
+    "folderName": "maestros-contratistas",
+    "name": "Maestros Contratistas en General Bazan",
+    "slogan": "La experiencia es la base de una construcción sólida.",
+    "services": [
+      {
+        "name": "Construcción de Viviendas",
+        "icon": "mdi:home-variant",
+        "description": "Construcción integral de casas y edificios residenciales."
+      },
+      {
+        "name": "Mantenimiento de Edificaciones",
+        "icon": "mdi:wrench",
+        "description": "Servicios de mantenimiento preventivo y correctivo."
+      },
+      {
+        "name": "Asesoría Técnica",
+        "icon": "mdi:lightbulb-on-outline",
+        "description": "Orientación experta en todas las etapas de tu proyecto."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 995 293 340",
+        "whatsapp": "51995293340",
+        "isPrimaryCta": true,
+        "ctaText": "¡Consulta con un experto!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/profile.php?id=61567109216711",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/maestroscontratasenengeneralbazan/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/maestros-contratistas/",
+    "card": "https://mercado-digital-page.github.io/espacio/maestros-contratistas/tarjeta",
+    "location": "General Bazan, Perú",
+    "mapsLink": "",
+    "primaryColor": "#546E7A",
+    "accentColor": "#90A4AE",
+    "profileImage": "multimedia/maestros-contratistas/profile.svg",
+    "blackLogo": "multimedia/maestros-contratistas/logo-negro.svg",
+    "whiteLogo": "multimedia/maestros-contratistas/logo-blanco.svg",
+    "primaryLogo": "multimedia/maestros-contratistas/logo-primario.svg",
+    "accentLogo": "multimedia/maestros-contratistas/logo-accent.svg",
+    "logo": "multimedia/maestros-contratistas/logo.png",
+    "banner": "multimedia/maestros-contratistas/banner.png",
+    "about": "Con años de experiencia en General Bazan, nuestros maestros contratistas ofrecen soluciones integrales y personalizadas para tus proyectos de construcción y mantenimiento.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:account-wrench",
+        "title": "Maestría y Dedicación",
+        "text": "Profesionales con amplia trayectoria en el sector de la construcción."
+      },
+      {
+        "icon": "mdi:tools",
+        "title": "Soluciones Integrales",
+        "text": "Desde la planificación hasta la ejecución y el mantenimiento."
+      },
+      {
+        "icon": "mdi:home-city-outline",
+        "title": "Conocimiento Local",
+        "text": "Entendemos las necesidades específicas de la región."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Construcción",
+    "type": "Técnico",
+    "gender": "Masculino"
+  },
+  {
+    "id": "drywall-proyecciones-ae",
+    "folderName": "drywall-proyecciones-ae",
+    "name": "Drywall proyecciones A.E",
+    "slogan": "Transformando espacios con soluciones ligeras y modernas.",
+    "services": [
+      {
+        "name": "Instalación de Drywall",
+        "icon": "mdi:wall",
+        "description": "Construcción de paredes, techos y divisiones con sistema drywall."
+      },
+      {
+        "name": "Cielo Raso",
+        "icon": "mdi:ceiling-light",
+        "description": "Instalación de cielos rasos decorativos y funcionales."
+      },
+      {
+        "name": "Aislamiento Acústico y Térmico",
+        "icon": "mdi:speaker",
+        "description": "Soluciones para mejorar el confort y la eficiencia energética."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 993 396 830",
+        "whatsapp": "51993396830",
+        "isPrimaryCta": true,
+        "ctaText": "¡Pide tu presupuesto!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/profile.php?id=61555802583251",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/drywallproyeccionesae/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/drywall-proyecciones-ae/",
+    "card": "https://mercado-digital-page.github.io/espacio/drywall-proyecciones-ae/tarjeta",
+    "location": "Lima, Perú",
+    "mapsLink": "",
+    "primaryColor": "#8D6E63",
+    "accentColor": "#BCAAA4",
+    "profileImage": "multimedia/drywall-proyecciones-ae/profile.svg",
+    "blackLogo": "multimedia/drywall-proyecciones-ae/logo-negro.svg",
+    "whiteLogo": "multimedia/drywall-proyecciones-ae/logo-blanco.svg",
+    "primaryLogo": "multimedia/drywall-proyecciones-ae/logo-primario.svg",
+    "accentLogo": "multimedia/drywall-proyecciones-ae/logo-accent.svg",
+    "logo": "multimedia/drywall-proyecciones-ae/logo.png",
+    "banner": "multimedia/drywall-proyecciones-ae/banner.png",
+    "about": "En Drywall Proyecciones A.E, somos especialistas en sistemas de construcción en seco. Ofrecemos soluciones prácticas y estéticas para tus proyectos en Lima.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:speedometer",
+        "title": "Rapidez y Eficiencia",
+        "text": "Instalaciones rápidas y limpias, optimizando tiempos."
+      },
+      {
+        "icon": "mdi:layers-outline",
+        "title": "Versatilidad de Diseño",
+        "text": "Flexibilidad para crear espacios únicos y personalizados."
+      },
+      {
+        "icon": "mdi:currency-usd",
+        "title": "Soluciones Económicas",
+        "text": "Alternativa rentable y de alta calidad."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Construcción",
+    "type": "Técnico",
+    "gender": "Neutro"
+  },
+  {
+    "id": "drywall-acabados-generales-cm",
+    "folderName": "drywall-acabados-generales-cm",
+    "name": "Drywall acabados generales C&M",
+    "slogan": "Detalles que hacen la diferencia en tus espacios.",
+    "services": [
+      {
+        "name": "Divisiones Interiores en Drywall",
+        "icon": "mdi:partition",
+        "description": "Creación de ambientes funcionales y modernos."
+      },
+      {
+        "name": "Acabados y Pintura",
+        "icon": "mdi:roller",
+        "description": "Servicios de estucado, lijado y pintura profesional."
+      },
+      {
+        "name": "Remodelaciones Integrales",
+        "icon": "mdi:home-refresh",
+        "description": "Transformación completa de tus espacios."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 925 773 406",
+        "whatsapp": "51925773406",
+        "isPrimaryCta": true,
+        "ctaText": "¡Contáctanos para renovar tus espacios!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/profile.php?id=61558134050155",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/drywallacabadosgeneralescm/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/drywall-acabados-generales-cm/",
+    "card": "https://mercado-digital-page.github.io/espacio/drywall-acabados-generales-cm/tarjeta",
+    "location": "Arequipa, Perú",
+    "mapsLink": "",
+    "primaryColor": "#3E2723",
+    "accentColor": "#D7CCC8",
+    "profileImage": "multimedia/drywall-acabados-generales-cm/profile.svg",
+    "blackLogo": "multimedia/drywall-acabados-generales-cm/logo-negro.svg",
+    "whiteLogo": "multimedia/drywall-drywall-acabados-generales-cm/logo-blanco.svg",
+    "primaryLogo": "multimedia/drywall-acabados-generales-cm/logo-primario.svg",
+    "accentLogo": "multimedia/drywall-acabados-generales-cm/logo-accent.svg",
+    "logo": "multimedia/drywall-acabados-generales-cm/logo.png",
+    "banner": "multimedia/drywall-acabados-generales-cm/banner.png",
+    "about": "Drywall Acabados Generales C&M ofrece soluciones integrales en drywall y acabados en Arequipa. Nos enfocamos en la calidad de los detalles para crear espacios únicos y acogedores.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:format-paint",
+        "title": "Acabados Impecables",
+        "text": "Atención meticulosa a los detalles para resultados sorprendentes."
+      },
+      {
+        "icon": "mdi:palette-outline",
+        "title": "Personalización Total",
+        "text": "Adaptamos cada proyecto a tus gustos y necesidades."
+      },
+      {
+        "icon": "mdi:account-check-outline",
+        "title": "Profesionales Confiables",
+        "text": "Equipo experimentado y comprometido con la excelencia."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Construcción",
+    "type": "Técnico",
+    "gender": "Neutro"
+  },
+  {
+    "id": "disenos-3d-rauni",
+    "folderName": "disenos-3d-rauni",
+    "name": "Diseños 3D Rauni",
+    "slogan": "Visualiza tus ideas antes de construirlas.",
+    "services": [
+      {
+        "name": "Modelado 3D de Arquitectura",
+        "icon": "mdi:cube-outline",
+        "description": "Creación de modelos tridimensionales de proyectos arquitectónicos."
+      },
+      {
+        "name": "Renderización Fotorrealista",
+        "icon": "mdi:camera",
+        "description": "Generación de imágenes de alta calidad para visualizar tus diseños."
+      },
+      {
+        "name": "Recorridos Virtuales",
+        "icon": "mdi:walk",
+        "description": "Experiencias inmersivas para explorar tus proyectos."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 985 455 656",
+        "whatsapp": "51985455656",
+        "isPrimaryCta": true,
+        "ctaText": "¡Da vida a tu proyecto!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/profile.php?id=61557943495638",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/disenos3drauni/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/disenos-3d-rauni/",
+    "card": "https://mercado-digital-page.github.io/espacio/disenos-3d-rauni/tarjeta",
+    "location": "Lima, Perú",
+    "mapsLink": "",
+    "primaryColor": "#424242",
+    "accentColor": "#757575",
+    "profileImage": "multimedia/disenos-3d-rauni/profile.svg",
+    "blackLogo": "multimedia/disenos-3d-rauni/logo-negro.svg",
+    "whiteLogo": "multimedia/disenos-3d-rauni/logo-blanco.svg",
+    "primaryLogo": "multimedia/disenos-3d-rauni/logo-primario.svg",
+    "accentLogo": "multimedia/disenos-3d-rauni/logo-accent.svg",
+    "logo": "multimedia/disenos-3d-rauni/logo.png",
+    "banner": "multimedia/disenos-3d-rauni/banner.png",
+    "about": "Diseños 3D Rauni te ofrece la mejor visualización de tus proyectos arquitectónicos. Con tecnología avanzada, transformamos planos en imágenes y recorridos virtuales impactantes en Lima.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:eye-outline",
+        "title": "Visualización Clara",
+        "text": "Comprende cada detalle de tu proyecto antes de la construcción."
+      },
+      {
+        "icon": "mdi:creation",
+        "title": "Diseños Innovadores",
+        "text": "Herramientas de vanguardia para plasmar tus ideas."
+      },
+      {
+        "icon": "mdi:presentation",
+        "title": "Presentaciones Impactantes",
+        "text": "Comunica tus proyectos de manera efectiva y profesional."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Diseño",
+    "type": "Servicio",
+    "gender": "Neutro"
+  },
+  {
+    "id": "jstudio-co",
+    "folderName": "jstudio-co",
+    "name": "JStudio&CO",
+    "slogan": "Creamos espacios con pasión y diseño.",
+    "services": [
+      {
+        "name": "Diseño de Interiores",
+        "icon": "mdi:sofa",
+        "description": "Creación de ambientes interiores funcionales y estéticos."
+      },
+      {
+        "name": "Decoración de Espacios",
+        "icon": "mdi:palette",
+        "description": "Selección de elementos decorativos para realzar tus ambientes."
+      },
+      {
+        "name": "Asesoría en Diseño",
+        "icon": "mdi:help-circle-outline",
+        "description": "Orientación profesional para tus proyectos de diseño."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 910 475 752",
+        "whatsapp": "51910475752",
+        "isPrimaryCta": true,
+        "ctaText": "¡Transforma tu espacio con nosotros!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/JStudioandCO",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/jstudioandco/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/jstudio-co/",
+    "card": "https://mercado-digital-page.github.io/espacio/jstudio-co/tarjeta",
+    "location": "Lima, Perú",
+    "mapsLink": "",
+    "primaryColor": "#795548",
+    "accentColor": "#A1887F",
+    "profileImage": "multimedia/jstudio-co/profile.svg",
+    "blackLogo": "multimedia/jstudio-co/logo-negro.svg",
+    "whiteLogo": "multimedia/jstudio-co/logo-blanco.svg",
+    "primaryLogo": "multimedia/jstudio-co/logo-primario.svg",
+    "accentLogo": "multimedia/jstudio-co/logo-accent.svg",
+    "logo": "multimedia/jstudio-co/logo.png",
+    "banner": "multimedia/jstudio-co/banner.png",
+    "about": "JStudio&CO es un estudio de diseño de interiores apasionado por crear espacios que reflejen tu estilo y personalidad en Lima. Ofrecemos soluciones creativas y funcionales.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:heart-outline",
+        "title": "Pasión por el Diseño",
+        "text": "Cada proyecto es abordado con creatividad y dedicación."
+      },
+      {
+        "icon": "mdi:account-tie-outline",
+        "title": "Profesionales Experimentados",
+        "text": "Un equipo con un ojo experto para el detalle."
+      },
+      {
+        "icon": "mdi:lightbulb-on",
+        "title": "Ideas Innovadoras",
+        "text": "Soluciones de diseño originales y personalizadas."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Diseño de Interiores",
+    "type": "Servicio",
+    "gender": "Neutro"
+  },
+  {
+    "id": "elaboracion-javier",
+    "folderName": "elaboracion-javier",
+    "name": "Elaboración & Javier",
+    "slogan": "Manos expertas, resultados duraderos.",
+    "services": [
+      {
+        "name": "Estructuras Metálicas",
+        "icon": "mdi:structure",
+        "description": "Diseño y fabricación de estructuras metálicas para diversas aplicaciones."
+      },
+      {
+        "name": "Carpintería Metálica",
+        "icon": "mdi:saw-blade",
+        "description": "Elaboración de puertas, ventanas, rejas y otros elementos metálicos."
+      },
+      {
+        "name": "Soldadura Profesional",
+        "icon": "mdi:fire",
+        "description": "Servicios de soldadura de alta calidad para proyectos industriales y residenciales."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 932 131 882",
+        "whatsapp": "51932131882",
+        "isPrimaryCta": true,
+        "ctaText": "¡Consúltanos sobre tu proyecto!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/profile.php?id=61552829417560",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/elaboracionjavier/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/elaboracion-javier/",
+    "card": "https://mercado-digital-page.github.io/espacio/elaboracion-javier/tarjeta",
+    "location": "Lima, Perú",
+    "mapsLink": "",
+    "primaryColor": "#263238",
+    "accentColor": "#607D8B",
+    "profileImage": "multimedia/elaboracion-javier/profile.svg",
+    "blackLogo": "multimedia/elaboracion-javier/logo-negro.svg",
+    "whiteLogo": "multimedia/elaboracion-javier/logo-blanco.svg",
+    "primaryLogo": "multimedia/elaboracion-javier/logo-primario.svg",
+    "accentLogo": "multimedia/elaboracion-javier/logo-accent.svg",
+    "logo": "multimedia/elaboracion-javier/logo.png",
+    "banner": "multimedia/elaboracion-javier/banner.png",
+    "about": "En Elaboración & Javier, somos especialistas en la fabricación y montaje de estructuras y carpintería metálica en Lima. Nuestra experiencia garantiza soluciones robustas y a medida.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:gavel",
+        "title": "Precisión y Calidad",
+        "text": "Trabajo meticuloso para asegurar la durabilidad y resistencia."
+      },
+      {
+        "icon": "mdi:factory",
+        "title": "Fabricación a Medida",
+        "text": "Adaptamos nuestros servicios a las necesidades específicas de cada cliente."
+      },
+      {
+        "icon": "mdi:users-cog-outline",
+        "title": "Equipo Calificado",
+        "text": "Profesionales con la habilidad y el conocimiento para cada proyecto."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Metalurgia",
+    "type": "Servicio",
+    "gender": "Masculino"
+  },
+  {
+    "id": "construcciones-generales-cornejos",
+    "folderName": "construcciones-generales-cornejos",
+    "name": "Construcciones Generales Cornejo's",
+    "slogan": "Construyendo con solidez, pensando en tu futuro.",
+    "services": [
+      {
+        "name": "Movimiento de Tierras",
+        "icon": "mdi:shovel",
+        "description": "Preparación del terreno para proyectos de construcción."
+      },
+      {
+        "name": "Cimentaciones",
+        "icon": "mdi:foundation",
+        "description": "Construcción de bases sólidas para edificaciones seguras."
+      },
+      {
+        "name": "Albañilería General",
+        "icon": "mdi:bricks-outline",
+        "description": "Trabajos de construcción con ladrillo, bloques y otros materiales."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 987 432 262",
+        "whatsapp": "51987432262",
+        "isPrimaryCta": true,
+        "ctaText": "¡Hablemos de tu proyecto!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/profile.php?id=61558863001737",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/construccionesgeneralescornejos/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/construcciones-generales-cornejos/",
+    "card": "https://mercado-digital-page.github.io/espacio/construcciones-generales-cornejos/tarjeta",
+    "location": "Cajamarca, Perú",
+    "mapsLink": "",
+    "primaryColor": "#4E342E",
+    "accentColor": "#795548",
+    "profileImage": "multimedia/construcciones-generales-cornejos/profile.svg",
+    "blackLogo": "multimedia/construcciones-generales-cornejos/logo-negro.svg",
+    "whiteLogo": "multimedia/construcciones-generales-cornejos/logo-blanco.svg",
+    "primaryLogo": "multimedia/construcciones-generales-cornejos/logo-primario.svg",
+    "accentLogo": "multimedia/construcciones-generales-cornejos/logo-accent.svg",
+    "logo": "multimedia/construcciones-generales-cornejos/logo.png",
+    "banner": "multimedia/construcciones-generales-cornejos/banner.png",
+    "about": "Construcciones Generales Cornejo's ofrece servicios de construcción con un enfoque en la calidad y la satisfacción del cliente en Cajamarca. Nos comprometemos con la solidez de cada proyecto.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:terrain",
+        "title": "Experiencia en Terreno",
+        "text": "Conocimiento profundo de las condiciones locales."
+      },
+      {
+        "icon": "mdi:layers",
+        "title": "Construcción Robusta",
+        "text": "Priorizamos la durabilidad y la seguridad de cada edificación."
+      },
+      {
+        "icon": "mdi:account-heart-outline",
+        "title": "Compromiso con el Cliente",
+        "text": "Tu satisfacción es nuestra principal prioridad."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Construcción",
+    "type": "Empresa",
+    "gender": "Neutro"
+  },
+  {
+    "id": "pv-energy",
+    "folderName": "pv-energy",
+    "name": "PV energy",
+    "slogan": "Iluminamos tu presente, potenciamos tu futuro.",
+    "services": [
+      {
+        "name": "Instalación Eléctrica",
+        "icon": "clarity:bolt-solid",
+        "description": "Diseño e instalación de sistemas eléctricos residenciales y comerciales."
+      },
+      {
+        "name": "Reparación Eléctrica",
+        "icon": "mdi:electric-switch",
+        "description": "Diagnóstico y solución de fallas eléctricas."
+      },
+      {
+        "name": "Mantenimiento Eléctrico",
+        "icon": "mdi:current-ac",
+        "description": "Servicios de mantenimiento preventivo para asegurar el buen funcionamiento."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 989357 969",
+        "whatsapp": "51989357969",
+        "isPrimaryCta": true,
+        "ctaText": "¡Cotiza por WhatsApp!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/energy.gv",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/pvenergy/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/pv-energy/",
+    "card": "https://mercado-digital-page.github.io/espacio/pv-energy/tarjeta",
+    "location": "Lima, Perú",
+    "mapsLink": "",
+    "primaryColor": "#03152A",
+    "accentColor": "#69D6E9",
+    "profileImage": "multimedia/pv-energy/profile.svg",
+    "blackLogo": "multimedia/pv-energy/logo-negro.svg",
+    "whiteLogo": "multimedia/pv-energy/logo-blanco.svg",
+    "primaryLogo": "multimedia/pv-energy/logo-primario.svg",
+    "accentLogo": "multimedia/pv-energy/logo-accent.svg",
+    "logo": "multimedia/pv-energy/logo.png",
+    "banner": "multimedia/pv-energy/banner.png",
+    "about": "En PV Energy, brindamos soluciones eléctricas confiables y seguras en Lima. Nuestro compromiso es ofrecer un servicio de calidad para hogares y negocios, iluminando tu presente y futuro.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:account-tie",
+        "title": "Experiencia y Profesionalismo",
+        "text": "Amplia experiencia y un equipo calificado en cada proyecto eléctrico."
+      },
+      {
+        "icon": "mdi:timer-outline",
+        "title": "Servicio Rápido y Eficiente",
+        "text": "Atención oportuna a consultas y emergencias eléctricas."
+      },
+      {
+        "icon": "mdi:tag",
+        "title": "Precios Competitivos",
+        "text": "Soluciones eléctricas a medida con precios justos."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Electricidad",
+    "type": "Técnico",
+    "gender": "Masculino"
+  },
+  {
+    "id": "j-l",
+    "folderName": "j-l",
+    "name": "J&L Electro Servicios Generales",
+    "slogan": "Conectamos tus ideas, protegemos tu espacio.",
+    "services": [
+      {
+        "name": "Instalaciones Eléctricas Expertas",
+        "icon": "clarity:bolt-solid",
+        "description": "Instalación y mantenimiento de sistemas eléctricos para hogares y empresas."
+      },
+      {
+        "name": "Cercos Eléctricos Seguros",
+        "icon": "mdi:security",
+        "description": "Instalación y mantenimiento de cercos eléctricos para protección perimetral."
+      },
+      {
+        "name": "Pintura Profesional",
+        "icon": "mdi:format-paint",
+        "description": "Servicios de pintura interior y exterior con acabados de calidad."
+      },
+      {
+        "name": "Cámaras de Seguridad HD",
+        "icon": "clarity:video-camera-solid",
+        "description": "Instalación de sistemas de videovigilancia de alta definición."
+      },
+      {
+        "name": "Alarmas Inteligentes",
+        "icon": "mdi:bell-ring-outline",
+        "description": "Instalación de sistemas de alarma avanzados para tu seguridad."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 955 679 216",
+        "whatsapp": "51955679216",
+        "isPrimaryCta": true,
+        "ctaText": "¡Cotiza por WhatsApp!"
+      },
+      {
+        "number": "+51 923 996 572",
+        "whatsapp": "51923996572",
+        "ctaText": "Consulta por WhatsApp"
+      }
+    ],
+    "emails": [
+      "jylelectrossgg@gmail.com"
+    ],
+    "facebook": "https://www.facebook.com/profile.php?id=100070168122542",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/jlelectroserviciosgenerales/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/j-l/",
+    "card": "https://mercado-digital-page.github.io/espacio/j-l/tarjeta",
+    "location": "Piura, Perú",
+    "mapsLink": "",
+    "primaryColor": "#011248",
+    "accentColor": "#fdb500",
+    "profileImage": "multimedia/j-l/profile.svg",
+    "blackLogo": "multimedia/j-l/logo-negro.svg",
+    "whiteLogo": "multimedia/j-l/logo-blanco.svg",
+    "primaryLogo": "multimedia/j-l/logo-primario.svg",
+    "accentLogo": "multimedia/j-l/logo-accent.svg",
+    "logo": "multimedia/j-l/logo.png",
+    "banner": "multimedia/j-l/banner.png",
+    "about": "J&L Electro Servicios Generales ofrece soluciones integrales en Piura: instalaciones eléctricas, cercos eléctricos, pintura, cámaras y alarmas. Comprometidos con la calidad y tu seguridad.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:puzzle-outline",
+        "title": "Servicio Integral",
+        "text": "Cobertura total en electricidad, seguridad y mantenimiento para tu hogar o negocio."
+      },
+      {
+        "icon": "mdi:security",
+        "title": "Seguridad Garantizada",
+        "text": "Protección confiable para tu propiedad con nuestros sistemas de seguridad."
+      },
+      {
+        "icon": "lucide:paint-roller",
+        "title": "Acabados Profesionales",
+        "text": "Estética y calidad en cada proyecto de pintura y acabado."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Servicios Generales",
+    "type": "Empresa",
+    "gender": "Neutro"
+  },
+  {
+    "id": "acuivetlife",
+    "folderName": "acuivetlife",
+    "name": "Acuivetlife",
+    "slogan": "Cuidado integral para la salud de tus mascotas.",
+    "services": [
+      {
+        "name": "Consultas Veterinarias",
+        "icon": "mdi:stethoscope",
+        "description": "Atención médica general y especializada para animales."
+      },
+      {
+        "name": "Vacunación y Desparasitación",
+        "icon": "mdi:inject",
+        "description": "Programas de prevención para mantener a tus mascotas saludables."
+      },
+      {
+        "name": "Cirugía Veterinaria",
+        "icon": "mdi:surgery",
+        "description": "Procedimientos quirúrgicos con equipos modernos y profesionales."
+      },
+      {
+        "name": "Peluquería Canina y Felina",
+        "icon": "mdi:scissors-cutting",
+        "description": "Servicios de estética para el bienestar y la higiene de tus mascotas."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 966 975 484",
+        "whatsapp": "51966975484",
+        "isPrimaryCta": true,
+        "ctaText": "¡Agenda una cita para tu mascota!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/Acuivetlife",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/acuivetlife/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/acuivetlife/",
+    "card": "https://mercado-digital-page.github.io/espacio/acuivetlife/tarjeta",
+    "location": "Lima, Perú",
+    "mapsLink": "",
+    "primaryColor": "#4CAF50",
+    "accentColor": "#81C784",
+    "profileImage": "multimedia/acuivetlife/profile.svg",
+    "blackLogo": "multimedia/acuivetlife/logo-negro.svg",
+    "whiteLogo": "multimedia/acuivetlife/logo-blanco.svg",
+    "primaryLogo": "multimedia/acuivetlife/logo-primario.svg",
+    "accentLogo": "multimedia/acuivetlife/logo-accent.svg",
+    "logo": "multimedia/acuivetlife/logo.png",
+    "banner": "multimedia/acuivetlife/banner.png",
+    "about": "Acuivetlife es un centro veterinario dedicado al cuidado integral de tus mascotas en Lima. Ofrecemos servicios de salud y bienestar con un equipo de profesionales amantes de los animales.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:heart-pulse",
+        "title": "Pasión por los Animales",
+        "text": "Nuestro equipo ama y cuida a tus mascotas como si fueran propias."
+      },
+      {
+        "icon": "mdi:doctor",
+        "title": "Profesionales Calificados",
+        "text": "Veterinarios con experiencia y en constante actualización."
+      },
+      {
+        "icon": "mdi:hospital-building",
+        "title": "Instalaciones Modernas",
+        "text": "Equipamiento avanzado para un diagnóstico y tratamiento eficaz."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Veterinaria",
+    "type": "Servicio",
+    "gender": "Neutro"
+  },
+  {
+    "id": "animal-space",
+    "folderName": "animal-space",
+    "name": "Animal Space",
+    "slogan": "Un espacio dedicado al bienestar de tus compañeros.",
+    "services": [
+      {
+        "name": "Guardería Canina",
+        "icon": "mdi:dog-house",
+        "description": "Cuidado de perros durante el día en un ambiente seguro y divertido."
+      },
+      {
+        "name": "Paseos para Perros",
+        "icon": "mdi:dog",
+        "description": "Servicio de paseo para asegurar la actividad física de tu mascota."
+      },
+      {
+        "name": "Entrenamiento Canino",
+        "icon": "mdi:dog-service",
+        "description": "Clases de adiestramiento para mejorar el comportamiento de tu perro."
+      },
+      {
+        "name": "Tienda de Mascotas",
+        "icon": "mdi:store",
+        "description": "Variedad de productos y accesorios para el cuidado de tus animales."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 989 786 349",
+        "whatsapp": "51989786349",
+        "isPrimaryCta": true,
+        "ctaText": "¡Reserva un espacio para tu mascota!"
+      }
+    ],
+    "emails": [],
+    "facebook": null,
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/animalspace/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/animal-space/",
+    "card": "https://mercado-digital-page.github.io/espacio/animal-space/tarjeta",
+    "location": "Miraflores, Lima",
+    "mapsLink": "",
+    "primaryColor": "#FF9800",
+    "accentColor": "#FFB74D",
+    "profileImage": "multimedia/animal-space/profile.svg",
+    "blackLogo": "multimedia/animal-space/logo-negro.svg",
+    "whiteLogo": "multimedia/animal-space/logo-blanco.svg",
+    "primaryLogo": "multimedia/animal-space/logo-primario.svg",
+    "accentLogo": "multimedia/animal-space/logo-accent.svg",
+    "logo": "multimedia/animal-space/logo.png",
+    "banner": "multimedia/animal-space/banner.png",
+    "about": "Animal Space es un lugar pensado para el bienestar y la felicidad de tus mascotas en Miraflores. Ofrecemos servicios de guardería, paseo, entrenamiento y tienda para cubrir todas sus necesidades.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:paw",
+        "title": "Amor y Cuidado",
+        "text": "Tratamos a tus mascotas con cariño y atención personalizada."
+      },
+      {
+        "icon": "mdi:fence",
+        "title": "Ambiente Seguro",
+        "text": "Instalaciones diseñadas para la seguridad y el confort de los animales."
+      },
+      {
+        "icon": "mdi:whistle",
+        "title": "Profesionales Dedicados",
+        "text": "Personal capacitado en el manejo y cuidado de mascotas."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Mascotas",
+    "type": "Servicio",
+    "gender": "Neutro"
+  },
+  {
+    "id": "ma-salud",
+    "folderName": "ma-salud",
+    "name": "MA Salud",
+    "slogan": "Tu bienestar es nuestra prioridad.",
+    "services": [
+      {
+        "name": "Consultas Médicas Generales",
+        "icon": "mdi:doctor",
+        "description": "Atención médica para diversas dolencias y chequeos de rutina."
+      },
+      {
+        "name": "Consultas Médicas Especializadas",
+        "icon": "mdi:medical-specialty",
+        "description": "Atención por especialistas en diferentes áreas de la medicina."
+      },
+      {
+        "name": "Exámenes de Laboratorio",
+        "icon": "mdi:flask-outline",
+        "description": "Análisis clínicos para el diagnóstico y seguimiento de enfermedades."
+      },
+      {
+        "name": "Atención de Enfermería",
+        "icon": "mdi:nurse",
+        "description": "Servicios de enfermería para el cuidado y la administración de tratamientos."
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 975 209 025",
+        "whatsapp": "51975209025",
+        "isPrimaryCta": true,
+        "ctaText": "¡Cuida tu salud con nosotros!"
+      }
+    ],
+    "emails": [],
+    "facebook": "https://www.facebook.com/profile.php?id=100088423399800",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://mercado-digital-page.github.io/platform/masalud/",
+    "brochure": "https://mercado-digital-page.github.io/espacio/ma-salud/",
+    "card": "https://mercado-digital-page.github.io/espacio/ma-salud/tarjeta",
+    "location": "Lima, Perú",
+    "mapsLink": "",
+    "primaryColor": "#E91E63",
+    "accentColor": "#F06292",
+    "profileImage": "multimedia/ma-salud/profile.svg",
+    "blackLogo": "multimedia/ma-salud/logo-negro.svg",
+    "whiteLogo": "multimedia/ma-salud/logo-blanco.svg",
+    "primaryLogo": "multimedia/ma-salud/logo-primario.svg",
+    "accentLogo": "multimedia/ma-salud/logo-accent.svg",
+    "logo": "multimedia/ma-salud/logo.png",
+    "banner": "multimedia/ma-salud/banner.png",
+    "about": "MA Salud es un centro médico comprometido con tu bienestar en Lima. Ofrecemos una amplia gama de servicios de salud con profesionales dedicados y atención de calidad.",
+    "whyChooseUs": [
+      {
+        "icon": "mdi:heart-outline",
+        "title": "Atención Humanizada","text": "Recibe un trato cálido y respetuoso en cada consulta."
+      },
+      {
+        "icon": "mdi:account-group",
+        "title": "Equipo Multidisciplinario",
+        "text": "Profesionales de diversas especialidades trabajando por tu salud."
+      },
+      {
+        "icon": "mdi:check-circle-outline",
+        "title": "Diagnóstico Preciso",
+        "text": "Exámenes y evaluaciones para un diagnóstico confiable."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Salud",
+    "type": "Servicio",
+    "gender": "Neutro"
   }
 ]
