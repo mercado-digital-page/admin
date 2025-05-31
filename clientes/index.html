@@ -1,747 +1,599 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Clientes</title>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #34495e;
-            --accent: #3498db;
-            --light: #ecf0f1;
-            --success: #2ecc71;
-            --warning: #f39c12;
-            --danger: #e74c3c;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Clientes</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <style>
+    * {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#03152A',
+            accent: '#69D6E9',
+          }
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f5f7fa;
-            color: #333;
-        }
-        
-        .container {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            min-height: 100vh;
-        }
-        
-        .sidebar {
-            background-color: var(--primary);
-            color: white;
-            padding: 20px;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-        }
-        
-        .sidebar h2 {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        .client-list {
-            list-style: none;
-        }
-        
-        .client-item {
-            padding: 12px 15px;
-            margin-bottom: 8px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(255,255,255,0.1);
-        }
-        
-        .client-item:hover {
-            background-color: rgba(255,255,255,0.2);
-        }
-        
-        .client-item.active {
-            background-color: var(--accent);
-            font-weight: bold;
-        }
-        
-        .progress-bar {
-            height: 5px;
-            background-color: rgba(255,255,255,0.3);
-            border-radius: 3px;
-            margin-top: 5px;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background-color: var(--success);
-            transition: width 0.3s;
-        }
-        
-        .main-content {
-            padding: 30px;
-            overflow-y: auto;
-        }
-        
-        .client-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .client-title {
-            font-size: 24px;
-            color: var(--primary);
-        }
-        
-        .completion {
-            background-color: var(--light);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            color: var(--primary);
-        }
-        
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        
-        .form-section {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
-        
-        .form-section h3 {
-            margin-bottom: 15px;
-            color: var(--secondary);
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .form-group {
-            margin-bottom: 15px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-            color: #555;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        
-        textarea.form-control {
-            min-height: 100px;
-            resize: vertical;
-        }
-        
-        .color-preview {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .color-box {
-            width: 50px;
-            height: 50px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-        
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary {
-            background-color: var(--accent);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background-color: #2980b9;
-        }
-        
-        .logo-preview {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .logo-box {
-            width: 100px;
-            height: 100px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            background-color: #f9f9f9;
-        }
-        
-        .logo-box img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-        
-        .array-item {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-            align-items: center;
-        }
-        
-        .array-item .form-control {
-            flex: 1;
-        }
-        
-        .btn-sm {
-            padding: 5px 10px;
-            font-size: 12px;
-        }
-        
-        .btn-danger {
-            background-color: var(--danger);
-            color: white;
-        }
-        
-        .btn-success {
-            background-color: var(--success);
-            color: white;
-        }
-        
-        .empty-field {
-            background-color: #fff8e1;
-        }
-        
-        .save-status {
-            margin-top: 20px;
-            padding: 10px;
-            border-radius: 4px;
-            text-align: center;
-            display: none;
-        }
-        
-        .save-success {
-            background-color: rgba(46, 204, 113, 0.2);
-            color: var(--success);
-        }
-        
-        .media-preview {
-            max-width: 200px;
-            max-height: 150px;
-            margin-top: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-    </style>
+      }
+    }
+  </script>
 </head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <h2>Clientes</h2>
-            <ul class="client-list" id="clientList">
-                <!-- Client items will be added here by JavaScript -->
-            </ul>
+<body class="bg-gray-50">
+  <div class="container mx-auto px-4 py-8">
+    <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 pb-4 border-b border-gray-200">
+      <h1 class="text-3xl font-bold text-gray-800">Gestor de Clientes</h1>
+      <div class="relative w-full md:w-96">
+        <input type="text" id="searchInput" placeholder="Buscar clientes..." 
+               class="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+        <button id="searchBtn" class="absolute right-0 top-0 h-full px-4 bg-accent text-white rounded-r-lg hover:bg-primary transition-colors">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </header>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="clientList">
+      <!-- Los clientes se cargarán aquí dinámicamente -->
+    </div>
+  </div>
+  
+  <!-- Modal de Detalles del Cliente -->
+  <div id="clientDetails" class="fixed inset-0 bg-black bg-opacity-70 z-50 overflow-y-auto hidden">
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="relative bg-white rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden">
+        <!-- Header con banner -->
+        <div id="detailsHeader" class="h-48 bg-primary relative">
+          <div class="absolute -bottom-12 left-6 w-24 h-24 rounded-full bg-white shadow-lg border-4 border-white overflow-hidden">
+            <img id="clientLogo" src="" alt="Logo" class="w-full h-full object-contain">
+          </div>
         </div>
-        <div class="main-content">
-            <div class="client-header">
-                <h1 class="client-title" id="clientTitle">Seleccione un cliente</h1>
-                <div class="completion" id="completionPercentage">0% completado</div>
+        
+        <!-- Cuerpo del modal -->
+        <div class="p-6 pt-16" id="detailsBody">
+          <!-- Contenido se carga dinámicamente -->
+        </div>
+        
+        <!-- Botones de cierre y edición -->
+        <button id="closeDetails" class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-gray-700 hover:text-accent">
+          <i class="fas fa-times"></i>
+        </button>
+        <button id="editClient" class="absolute top-4 right-16 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-gray-700 hover:text-accent">
+          <i class="fas fa-edit"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal de Edición -->
+  <div id="editForm" class="fixed inset-0 bg-black bg-opacity-70 z-50 overflow-y-auto hidden">
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="relative bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden">
+        <div class="p-6">
+          <h2 class="text-2xl font-bold mb-6 text-primary border-b-2 border-accent pb-2">Editar Cliente</h2>
+          <form id="clientForm">
+            <input type="hidden" id="editId">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div class="space-y-4">
+                <div>
+                  <label for="editName" class="block text-sm font-medium text-gray-700 mb-1">Nombre de la empresa</label>
+                  <input type="text" id="editName" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                </div>
+                
+                <div>
+                  <label for="editSlogan" class="block text-sm font-medium text-gray-700 mb-1">Slogan</label>
+                  <input type="text" id="editSlogan" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                </div>
+                
+                <div>
+                  <label for="editPrimaryColor" class="block text-sm font-medium text-gray-700 mb-1">Color primario</label>
+                  <div class="flex items-center gap-2">
+                    <input type="color" id="editPrimaryColor" class="w-12 h-12 border border-gray-300 rounded-md">
+                    <input type="text" id="editPrimaryColorText" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="editAccentColor" class="block text-sm font-medium text-gray-700 mb-1">Color secundario</label>
+                  <div class="flex items-center gap-2">
+                    <input type="color" id="editAccentColor" class="w-12 h-12 border border-gray-300 rounded-md">
+                    <input type="text" id="editAccentColorText" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div>
+                  <label for="editCategory" class="block text-sm font-medium text-gray-700 mb-1">Categoría</label>
+                  <input type="text" id="editCategory" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                </div>
+                
+                <div>
+                  <label for="editType" class="block text-sm font-medium text-gray-700 mb-1">Tipo</label>
+                  <select id="editType" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    <option value="Empresa">Empresa</option>
+                    <option value="Técnico">Técnico</option>
+                    <option value="Freelancer">Freelancer</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label for="editLocation" class="block text-sm font-medium text-gray-700 mb-1">Ubicación</label>
+                  <input type="text" id="editLocation" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                </div>
+                
+                <div>
+                  <label for="editMapsLink" class="block text-sm font-medium text-gray-700 mb-1">Enlace de Google Maps</label>
+                  <input type="url" id="editMapsLink" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                </div>
+              </div>
             </div>
             
-            <div id="clientForm" style="display: none;">
-                <div class="form-grid">
-                    <div class="form-section">
-                        <h3>Información Básica</h3>
-                        <div class="form-group">
-                            <label for="name">Nombre de la empresa</label>
-                            <input type="text" class="form-control" id="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="folderName">Nombre de carpeta</label>
-                            <input type="text" class="form-control" id="folderName" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="slogan">Slogan</label>
-                            <input type="text" class="form-control" id="slogan">
-                        </div>
-                        <div class="form-group">
-                            <label for="location">Ubicación</label>
-                            <input type="text" class="form-control" id="location">
-                        </div>
-                        <div class="form-group">
-                            <label for="mapsLink">Enlace de Google Maps</label>
-                            <input type="url" class="form-control" id="mapsLink">
-                        </div>
-                    </div>
-                    
-                    <div class="form-section">
-                        <h3>Descripción y Servicios</h3>
-                        <div class="form-group">
-                            <label for="about">Acerca de la empresa</label>
-                            <textarea class="form-control" id="about"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Servicios</label>
-                            <div id="servicesContainer">
-                                <!-- Services will be added here -->
-                            </div>
-                            <button type="button" class="btn btn-primary btn-sm" id="addService">+ Añadir servicio</button>
-                        </div>
-                    </div>
-                    
-                    <div class="form-section">
-                        <h3>Contacto</h3>
-                        <div class="form-group">
-                            <label>Teléfonos</label>
-                            <div id="phonesContainer">
-                                <!-- Phones will be added here -->
-                            </div>
-                            <button type="button" class="btn btn-primary btn-sm" id="addPhone">+ Añadir teléfono</button>
-                        </div>
-                        <div class="form-group">
-                            <label>Correos electrónicos</label>
-                            <div id="emailsContainer">
-                                <!-- Emails will be added here -->
-                            </div>
-                            <button type="button" class="btn btn-primary btn-sm" id="addEmail">+ Añadir email</button>
-                        </div>
-                    </div>
-                    
-                    <div class="form-section">
-                        <h3>Redes Sociales</h3>
-                        <div class="form-group">
-                            <label for="facebook">Facebook</label>
-                            <input type="url" class="form-control" id="facebook">
-                        </div>
-                        <div class="form-group">
-                            <label for="instagram">Instagram</label>
-                            <input type="url" class="form-control" id="instagram">
-                        </div>
-                        <div class="form-group">
-                            <label for="tiktok">TikTok</label>
-                            <input type="url" class="form-control" id="tiktok">
-                        </div>
-                        <div class="form-group">
-                            <label for="youtube">YouTube</label>
-                            <input type="url" class="form-control" id="youtube">
-                        </div>
-                        <div class="form-group">
-                            <label for="website">Sitio web</label>
-                            <input type="url" class="form-control" id="website">
-                        </div>
-                    </div>
-                    
-                    <div class="form-section">
-                        <h3>Diseño y Branding</h3>
-                        <div class="form-group">
-                            <label for="primaryColor">Color primario</label>
-                            <input type="color" class="form-control" id="primaryColor" style="height: 40px; padding: 3px;">
-                            <div class="color-preview">
-                                <div class="color-box" id="primaryColorPreview"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="accentColor">Color de acento</label>
-                            <input type="color" class="form-control" id="accentColor" style="height: 40px; padding: 3px;">
-                            <div class="color-preview">
-                                <div class="color-box" id="accentColorPreview"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-section">
-                        <h3>Archivos Multimedia</h3>
-                        <div class="form-group">
-                            <label for="profileImage">Imagen de perfil</label>
-                            <input type="text" class="form-control" id="profileImage" readonly>
-                            <img src="" alt="Preview" class="media-preview" id="profileImagePreview">
-                        </div>
-                        <div class="form-group">
-                            <label for="logo">Logo principal</label>
-                            <input type="text" class="form-control" id="logo" readonly>
-                            <img src="" alt="Preview" class="media-preview" id="logoPreview">
-                        </div>
-                        <div class="form-group">
-                            <label for="banner">Banner</label>
-                            <input type="text" class="form-control" id="banner" readonly>
-                            <img src="" alt="Preview" class="media-preview" id="bannerPreview">
-                        </div>
-                    </div>
-                    
-                    <div class="form-section">
-                        <h3>Logos Variantes</h3>
-                        <div class="form-group">
-                            <label for="blackLogo">Logo negro</label>
-                            <input type="text" class="form-control" id="blackLogo" readonly>
-                            <img src="" alt="Preview" class="media-preview" id="blackLogoPreview">
-                        </div>
-                        <div class="form-group">
-                            <label for="whiteLogo">Logo blanco</label>
-                            <input type="text" class="form-control" id="whiteLogo" readonly>
-                            <img src="" alt="Preview" class="media-preview" id="whiteLogoPreview">
-                        </div>
-                        <div class="form-group">
-                            <label for="primaryLogo">Logo primario</label>
-                            <input type="text" class="form-control" id="primaryLogo" readonly>
-                            <img src="" alt="Preview" class="media-preview" id="primaryLogoPreview">
-                        </div>
-                        <div class="form-group">
-                            <label for="accentLogo">Logo acento</label>
-                            <input type="text" class="form-control" id="accentLogo" readonly>
-                            <img src="" alt="Preview" class="media-preview" id="accentLogoPreview">
-                        </div>
-                    </div>
-                    
-                    <div class="form-section">
-                        <h3>Documentos</h3>
-                        <div class="form-group">
-                            <label for="brochure">Brochure</label>
-                            <input type="text" class="form-control" id="brochure" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="card">Tarjeta de presentación</label>
-                            <input type="text" class="form-control" id="card" readonly>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-section">
-                    <button type="button" class="btn btn-primary" id="saveClient">Guardar Cambios</button>
-                    <div class="save-status" id="saveStatus"></div>
-                </div>
+            <div class="mb-6">
+              <label for="editAbout" class="block text-sm font-medium text-gray-700 mb-1">Acerca de</label>
+              <textarea id="editAbout" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"></textarea>
             </div>
+            
+            <div class="flex justify-end gap-3">
+              <button type="button" id="cancelEdit" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition-colors">Cancelar</button>
+              <button type="submit" class="px-4 py-2 bg-accent text-white rounded-md hover:bg-primary transition-colors">Guardar cambios</button>
+            </div>
+          </form>
         </div>
+        
+        <button id="closeEdit" class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center text-gray-700 hover:text-accent">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
     </div>
+  </div>
 
-    <script>
-        // Fetch data from data.json
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                const clients = data;
-                let currentClient = null;
+  <script>
+    // Variables globales
+    let clients = [];
+    let currentClient = null;
+    const baseImagePath = "";
+    
+    // Elementos del DOM
+    const clientList = document.getElementById('clientList');
+    const clientDetails = document.getElementById('clientDetails');
+    const detailsHeader = document.getElementById('detailsHeader');
+    const detailsBody = document.getElementById('detailsBody');
+    const clientLogo = document.getElementById('clientLogo');
+    const closeDetails = document.getElementById('closeDetails');
+    const editClient = document.getElementById('editClient');
+    const editForm = document.getElementById('editForm');
+    const clientForm = document.getElementById('clientForm');
+    const cancelEdit = document.getElementById('cancelEdit');
+    const closeEdit = document.getElementById('closeEdit');
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const editPrimaryColor = document.getElementById('editPrimaryColor');
+    const editPrimaryColorText = document.getElementById('editPrimaryColorText');
+    const editAccentColor = document.getElementById('editAccentColor');
+    const editAccentColorText = document.getElementById('editAccentColorText');
+    
+    // Cargar datos de clientes
+    async function loadClients() {
+      try {
+        const response = await fetch('https://mercado-digital-page.github.io/admin/clientes/data.json');
+        clients = await response.json();
+        renderClientList(clients);
+      } catch (error) {
+        console.error('Error al cargar los clientes:', error);
+        clientList.innerHTML = `
+          <div class="col-span-full py-10 text-center text-gray-500">
+            <i class="fas fa-exclamation-triangle text-3xl mb-3 text-accent"></i>
+            <p class="text-lg">Error al cargar los clientes. Por favor, intente nuevamente.</p>
+          </div>
+        `;
+      }
+    }
+    
+    // Renderizar lista de clientes
+    function renderClientList(clientsToRender) {
+      if (clientsToRender.length === 0) {
+        clientList.innerHTML = `
+          <div class="col-span-full py-16 text-center">
+            <i class="fas fa-search text-4xl mb-4 text-gray-400"></i>
+            <h3 class="text-xl font-medium text-gray-600 mb-2">No se encontraron resultados</h3>
+            <p class="text-gray-500">No hay clientes que coincidan con tu búsqueda</p>
+          </div>
+        `;
+        return;
+      }
+      
+      clientList.innerHTML = clientsToRender.map(client => {
+        const logoPath = client.logo ? baseImagePath + client.logo : 
+                         client.primaryLogo ? baseImagePath + client.primaryLogo : 
+                         client.profileImage ? baseImagePath + client.profileImage : '';
+        
+        return `
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer" 
+               data-id="${client.id}" 
+               style="--primary-color: ${client.primaryColor}; --accent-color: ${client.accentColor}">
+            <div class="h-32" style="background: ${client.primaryColor}">
+              ${client.banner ? `
+                <img src="${baseImagePath + client.banner}" alt="${client.name}" class="w-full h-full object-cover">
+              ` : ''}
+            </div>
+            <div class="p-5 relative">
+              <div class="absolute -top-8 left-5 w-16 h-16 rounded-full bg-white shadow-md border-4 border-white overflow-hidden">
+                ${logoPath ? `
+                  <img src="${logoPath}" alt="${client.name}" class="w-full h-full object-contain">
+                ` : `
+                  <div class="w-full h-full flex items-center justify-center font-bold text-lg" style="color: ${client.primaryColor}">
+                    ${getInitials(client.name)}
+                  </div>
+                `}
+              </div>
+              <h3 class="text-lg font-semibold mt-4" style="color: ${client.primaryColor}">${client.name}</h3>
+              <p class="text-sm text-gray-500 italic mb-2">${client.slogan}</p>
+              <span class="inline-block px-2 py-1 text-xs rounded-md bg-gray-100 text-gray-700">
+                ${client.category}
+              </span>
+            </div>
+          </div>
+        `;
+      }).join('');
+      
+      // Agregar event listeners a las tarjetas
+      document.querySelectorAll('[data-id]').forEach(card => {
+        card.addEventListener('click', () => {
+          const clientId = card.getAttribute('data-id');
+          showClientDetails(clientId);
+        });
+      });
+    }
+    
+    // Mostrar detalles del cliente
+    function showClientDetails(clientId) {
+      currentClient = clients.find(c => c.id === clientId);
+      if (!currentClient) return;
+      
+      // Configurar imágenes
+      const bannerPath = currentClient.banner ? baseImagePath + currentClient.banner : '';
+      const logoPath = currentClient.logo ? baseImagePath + currentClient.logo : 
+                      currentClient.primaryLogo ? baseImagePath + currentClient.primaryLogo : 
+                      currentClient.profileImage ? baseImagePath + currentClient.profileImage : '';
+      
+      // Configurar encabezado
+      detailsHeader.style.backgroundColor = currentClient.primaryColor;
+      if (bannerPath) {
+        detailsHeader.innerHTML = `<img src="${bannerPath}" alt="${currentClient.name}" class="w-full h-full object-cover">`;
+      } else {
+        detailsHeader.innerHTML = '';
+      }
+      
+      if (logoPath) {
+        clientLogo.src = logoPath;
+        clientLogo.alt = currentClient.name;
+      } else {
+        clientLogo.src = '';
+        clientLogo.alt = '';
+        clientLogo.innerHTML = `
+          <div class="w-full h-full flex items-center justify-center font-bold text-2xl" style="color: ${currentClient.primaryColor}">
+            ${getInitials(currentClient.name)}
+          </div>
+        `;
+      }
+      
+      // Configurar cuerpo
+      detailsBody.innerHTML = `
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+          <div>
+            <h1 class="text-3xl font-bold" style="color: ${currentClient.primaryColor}">${currentClient.name}</h1>
+            <p class="text-gray-600 italic">${currentClient.slogan}</p>
+          </div>
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full">
+            <i class="fas fa-shield-alt" style="color: ${currentClient.accentColor}"></i>
+            <span class="font-medium">Puntaje de confiabilidad:</span>
+            <span class="font-bold" style="color: ${currentClient.primaryColor}">${currentClient.reliabilityScore}%</span>
+          </div>
+        </div>
+        
+        <div class="flex flex-wrap gap-3 mb-6">
+          <div class="flex items-center gap-1 text-sm text-gray-600">
+            <i class="fas fa-map-marker-alt" style="color: ${currentClient.accentColor}"></i>
+            ${currentClient.location}
+          </div>
+          <div class="flex items-center gap-1 text-sm text-gray-600">
+            <i class="fas fa-tag" style="color: ${currentClient.accentColor}"></i>
+            ${currentClient.category}
+          </div>
+          <div class="flex items-center gap-1 text-sm text-gray-600">
+            <i class="fas fa-user-tie" style="color: ${currentClient.accentColor}"></i>
+            ${currentClient.type}
+          </div>
+        </div>
+        
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-3 pb-1 border-b-2" style="border-color: ${currentClient.accentColor}">Acerca de</h2>
+          <p class="text-gray-700">${currentClient.about}</p>
+        </div>
+        
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-3 pb-1 border-b-2" style="border-color: ${currentClient.accentColor}">Servicios</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            ${currentClient.services.map(service => `
+              <div class="bg-gray-50 p-4 rounded-lg hover:shadow-md transition-shadow">
+                <div class="text-3xl mb-2" style="color: ${currentClient.accentColor}">
+                  <iconify-icon icon="${service.icon}"></iconify-icon>
+                </div>
+                <h3 class="font-semibold mb-1" style="color: ${currentClient.primaryColor}">${service.name}</h3>
+                <p class="text-sm text-gray-600">${service.description}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-3 pb-1 border-b-2" style="border-color: ${currentClient.accentColor}">¿Por qué elegirnos?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            ${currentClient.whyChooseUs.map(reason => `
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="text-3xl mb-2" style="color: ${currentClient.accentColor}">
+                  <iconify-icon icon="${reason.icon}"></iconify-icon>
+                </div>
+                <h3 class="font-semibold mb-1" style="color: ${currentClient.primaryColor}">${reason.title}</h3>
+                <p class="text-sm text-gray-600">${reason.text}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-3 pb-1 border-b-2" style="border-color: ${currentClient.accentColor}">Contacto</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div>
+              <h3 class="font-medium mb-2" style="color: ${currentClient.primaryColor}">Teléfonos</h3>
+              <div class="space-y-2">
+                ${currentClient.phones.map(phone => `
+                  <div class="flex items-start gap-2">
+                    <div class="mt-1 w-8 h-8 rounded-full flex items-center justify-center" style="background: ${currentClient.accentColor}">
+                      <i class="fas fa-phone text-white text-sm"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm">${phone.number}</p>
+                      ${phone.ctaText ? `
+                        <a href="https://wa.me/${phone.whatsapp}" target="_blank" 
+                           class="text-xs font-medium" style="color: ${currentClient.accentColor}">
+                          ${phone.ctaText}
+                        </a>
+                      ` : ''}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="font-medium mb-2" style="color: ${currentClient.primaryColor}">Correos</h3>
+              <div class="space-y-2">
+                ${currentClient.emails.map(email => `
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: ${currentClient.accentColor}">
+                      <i class="fas fa-envelope text-white text-sm"></i>
+                    </div>
+                    <a href="mailto:${email}" class="text-sm hover:underline">${email}</a>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="font-medium mb-2" style="color: ${currentClient.primaryColor}">Redes Sociales</h3>
+              <div class="space-y-2">
+                ${currentClient.facebook ? `
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: ${currentClient.accentColor}">
+                      <i class="fab fa-facebook-f text-white text-sm"></i>
+                    </div>
+                    <a href="${currentClient.facebook}" target="_blank" class="text-sm hover:underline">Facebook</a>
+                  </div>
+                ` : ''}
                 
-                // DOM elements
-                const clientList = document.getElementById('clientList');
-                const clientTitle = document.getElementById('clientTitle');
-                const completionPercentage = document.getElementById('completionPercentage');
-                const clientForm = document.getElementById('clientForm');
+                ${currentClient.instagram ? `
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: ${currentClient.accentColor}">
+                      <i class="fab fa-instagram text-white text-sm"></i>
+                    </div>
+                    <a href="${currentClient.instagram}" target="_blank" class="text-sm hover:underline">Instagram</a>
+                  </div>
+                ` : ''}
                 
-                // Render client list
-                function renderClientList() {
-                    clientList.innerHTML = '';
-                    clients.forEach(client => {
-                        const completion = calculateCompletion(client);
-                        
-                        const li = document.createElement('li');
-                        li.className = 'client-item';
-                        if (currentClient && client.folderName === currentClient.folderName) {
-                            li.classList.add('active');
-                        }
-                        li.innerHTML = `
-                            <span>${client.name || 'Sin nombre'}</span>
-                            <span>${completion}%</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: ${completion}%"></div>
-                            </div>
-                        `;
-                        li.addEventListener('click', () => loadClient(client));
-                        clientList.appendChild(li);
-                    });
-                }
+                ${currentClient.tiktok ? `
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: ${currentClient.accentColor}">
+                      <i class="fab fa-tiktok text-white text-sm"></i>
+                    </div>
+                    <a href="${currentClient.tiktok}" target="_blank" class="text-sm hover:underline">TikTok</a>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="font-medium mb-2" style="color: ${currentClient.primaryColor}">Otros</h3>
+              <div class="space-y-2">
+                ${currentClient.mapsLink ? `
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: ${currentClient.accentColor}">
+                      <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                    </div>
+                    <a href="${currentClient.mapsLink}" target="_blank" class="text-sm hover:underline">Ver en mapa</a>
+                  </div>
+                ` : ''}
                 
-                // Calculate completion percentage
-                function calculateCompletion(client) {
-                    const fields = [
-                        'name', 'slogan', 'about', 'services', 'phones', 'emails',
-                        'facebook', 'instagram', 'tiktok', 'youtube', 'website',
-                        'location', 'primaryColor', 'accentColor'
-                    ];
-                    
-                    let completed = 0;
-                    fields.forEach(field => {
-                        if (Array.isArray(client[field])) {
-                            if (client[field].length > 0 && client[field][0] !== '') {
-                                completed++;
-                            }
-                        } else if (client[field] && client[field] !== '') {
-                            completed++;
-                        }
-                    });
-                    
-                    return Math.round((completed / fields.length) * 100);
-                }
-                
-                // Load client data into form
-                function loadClient(client) {
-                    currentClient = client;
-                    renderClientList();
-                    
-                    clientTitle.textContent = client.name || 'Cliente sin nombre';
-                    completionPercentage.textContent = `${calculateCompletion(client)}% completado`;
-                    clientForm.style.display = 'block';
-                    
-                    // Basic info
-                    document.getElementById('name').value = client.name || '';
-                    document.getElementById('folderName').value = client.folderName || '';
-                    document.getElementById('slogan').value = client.slogan || '';
-                    document.getElementById('location').value = client.location || '';
-                    document.getElementById('mapsLink').value = client.mapsLink || '';
-                    
-                    // About and services
-                    document.getElementById('about').value = client.about || '';
-                    renderArrayField('services', client.services, 'servicesContainer');
-                    
-                    // Contact
-                    renderArrayField('phones', client.phones, 'phonesContainer');
-                    renderArrayField('emails', client.emails, 'emailsContainer');
-                    
-                    // Social media
-                    document.getElementById('facebook').value = client.facebook || '';
-                    document.getElementById('instagram').value = client.instagram || '';
-                    document.getElementById('tiktok').value = client.tiktok || '';
-                    document.getElementById('youtube').value = client.youtube || '';
-                    document.getElementById('website').value = client.website || '';
-                    
-                    // Design
-                    document.getElementById('primaryColor').value = client.primaryColor || '#000000';
-                    document.getElementById('accentColor').value = client.accentColor || '#000000';
-                    document.getElementById('primaryColorPreview').style.backgroundColor = client.primaryColor || 'transparent';
-                    document.getElementById('accentColorPreview').style.backgroundColor = client.accentColor || 'transparent';
-                    
-                    // Media
-                    updateMediaPreview('profileImage', client.profileImage);
-                    updateMediaPreview('logo', client.logo);
-                    updateMediaPreview('banner', client.banner);
-                    updateMediaPreview('blackLogo', client.blackLogo);
-                    updateMediaPreview('whiteLogo', client.whiteLogo);
-                    updateMediaPreview('primaryLogo', client.primaryLogo);
-                    updateMediaPreview('accentLogo', client.accentLogo);
-                    
-                    // Documents
-                    document.getElementById('brochure').value = client.brochure || '';
-                    document.getElementById('card').value = client.card || '';
-                    
-                    // Highlight empty fields
-                    highlightEmptyFields();
-                }
-                
-                // Render array fields (services, phones, emails)
-                function renderArrayField(fieldName, array, containerId) {
-                    const container = document.getElementById(containerId);
-                    container.innerHTML = '';
-                    
-                    if (!array || array.length === 0) {
-                        array = [''];
-                    }
-                    
-                    array.forEach((item, index) => {
-                        const div = document.createElement('div');
-                        div.className = 'array-item';
-                        if (item === '') {
-                            div.classList.add('empty-field');
-                        }
-                        
-                        div.innerHTML = `
-                            <input type="${fieldName === 'emails' ? 'email' : 'text'}" 
-                                   class="form-control ${fieldName}-item" 
-                                   value="${item}" 
-                                   data-index="${index}">
-                            <button type="button" class="btn btn-danger btn-sm remove-item" data-field="${fieldName}" data-index="${index}">×</button>
-                        `;
-                        
-                        container.appendChild(div);
-                    });
-                }
-                
-                // Update media preview
-                function updateMediaPreview(elementId, path) {
-                    const input = document.getElementById(elementId);
-                    const preview = document.getElementById(elementId + 'Preview');
-                    
-                    if (input && preview) {
-                        input.value = path || '';
-                        if (path) {
-                            preview.src = path;
-                            preview.style.display = 'block';
-                        } else {
-                            preview.style.display = 'none';
-                        }
-                    }
-                }
-                
-                // Highlight empty fields
-                function highlightEmptyFields() {
-                    document.querySelectorAll('.form-control').forEach(input => {
-                        if (input.value === '' && !input.readOnly) {
-                            input.classList.add('empty-field');
-                        } else {
-                            input.classList.remove('empty-field');
-                        }
-                    });
-                }
-                
-                // Save client data
-                function saveClient() {
-                    if (!currentClient) return;
-                    
-                    // Basic info
-                    currentClient.name = document.getElementById('name').value;
-                    currentClient.slogan = document.getElementById('slogan').value;
-                    currentClient.location = document.getElementById('location').value;
-                    currentClient.mapsLink = document.getElementById('mapsLink').value;
-                    
-                    // About and services
-                    currentClient.about = document.getElementById('about').value;
-                    currentClient.services = getArrayValues('services');
-                    
-                    // Contact
-                    currentClient.phones = getArrayValues('phones');
-                    currentClient.emails = getArrayValues('emails');
-                    
-                    // Social media
-                    currentClient.facebook = document.getElementById('facebook').value;
-                    currentClient.instagram = document.getElementById('instagram').value;
-                    currentClient.tiktok = document.getElementById('tiktok').value;
-                    currentClient.youtube = document.getElementById('youtube').value;
-                    currentClient.website = document.getElementById('website').value;
-                    
-                    // Design
-                    currentClient.primaryColor = document.getElementById('primaryColor').value;
-                    currentClient.accentColor = document.getElementById('accentColor').value;
-                    
-                    // Update completion percentage
-                    completionPercentage.textContent = `${calculateCompletion(currentClient)}% completado`;
-                    renderClientList();
-                    
-                    // Show save status
-                    const saveStatus = document.getElementById('saveStatus');
-                    saveStatus.textContent = 'Cambios guardados localmente';
-                    saveStatus.className = 'save-status save-success';
-                    saveStatus.style.display = 'block';
-                    
-                    setTimeout(() => {
-                        saveStatus.style.display = 'none';
-                    }, 3000);
-                    
-                    // Highlight empty fields
-                    highlightEmptyFields();
-                }
-                
-                // Get array values from inputs
-                function getArrayValues(fieldName) {
-                    const items = [];
-                    document.querySelectorAll(`.${fieldName}-item`).forEach(input => {
-                        if (input.value.trim() !== '') {
-                            items.push(input.value.trim());
-                        }
-                    });
-                    return items.length > 0 ? items : [''];
-                }
-                
-                // Event listeners
-                document.getElementById('addService').addEventListener('click', () => {
-                    const container = document.getElementById('servicesContainer');
-                    const div = document.createElement('div');
-                    div.className = 'array-item empty-field';
-                    div.innerHTML = `
-                        <input type="text" class="form-control services-item" value="" data-index="${document.querySelectorAll('.services-item').length}">
-                        <button type="button" class="btn btn-danger btn-sm remove-item" data-field="services" data-index="${document.querySelectorAll('.services-item').length}">×</button>
-                    `;
-                    container.appendChild(div);
-                });
-                
-                document.getElementById('addPhone').addEventListener('click', () => {
-                    const container = document.getElementById('phonesContainer');
-                    const div = document.createElement('div');
-                    div.className = 'array-item empty-field';
-                    div.innerHTML = `
-                        <input type="text" class="form-control phones-item" value="" data-index="${document.querySelectorAll('.phones-item').length}">
-                        <button type="button" class="btn btn-danger btn-sm remove-item" data-field="phones" data-index="${document.querySelectorAll('.phones-item').length}">×</button>
-                    `;
-                    container.appendChild(div);
-                });
-                
-                document.getElementById('addEmail').addEventListener('click', () => {
-                    const container = document.getElementById('emailsContainer');
-                    const div = document.createElement('div');
-                    div.className = 'array-item empty-field';
-                    div.innerHTML = `
-                        <input type="email" class="form-control emails-item" value="" data-index="${document.querySelectorAll('.emails-item').length}">
-                        <button type="button" class="btn btn-danger btn-sm remove-item" data-field="emails" data-index="${document.querySelectorAll('.emails-item').length}">×</button>
-                    `;
-                    container.appendChild(div);
-                });
-                
-                document.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('remove-item')) {
-                        const field = e.target.getAttribute('data-field');
-                        const index = parseInt(e.target.getAttribute('data-index'));
-                        
-                        if (document.querySelectorAll(`.${field}-item`).length > 1) {
-                            e.target.parentElement.remove();
-                        } else {
-                            // If it's the last item, just clear it
-                            const input = e.target.previousElementSibling;
-                            input.value = '';
-                            input.classList.add('empty-field');
-                        }
-                    }
-                });
-                
-                document.getElementById('saveClient').addEventListener('click', saveClient);
-                
-                // Color preview update
-                document.getElementById('primaryColor').addEventListener('input', (e) => {
-                    document.getElementById('primaryColorPreview').style.backgroundColor = e.target.value;
-                });
-                
-                document.getElementById('accentColor').addEventListener('input', (e) => {
-                    document.getElementById('accentColorPreview').style.backgroundColor = e.target.value;
-                });
-                
-                // Initial render
-                renderClientList();
-                
-                // Load first client by default
-                if (clients.length > 0) {
-                    loadClient(clients[0]);
-                }
-            })
-            .catch(error => {
-                console.error('Error loading data:', error);
-                alert('Error al cargar los datos de los clientes. Por favor verifica que el archivo data.json exista y tenga el formato correcto.');
-            });
-    </script>
+                ${currentClient.website ? `
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: ${currentClient.accentColor}">
+                      <i class="fas fa-globe text-white text-sm"></i>
+                    </div>
+                    <a href="${currentClient.website}" target="_blank" class="text-sm hover:underline">Sitio web</a>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        ${currentClient.phones.some(p => p.isPrimaryCta) ? `
+          <div class="text-center">
+            <a href="https://wa.me/${currentClient.phones.find(p => p.isPrimaryCta).whatsapp}" 
+               target="_blank" 
+               class="inline-block px-6 py-3 rounded-full font-medium text-white hover:shadow-lg transition-all"
+               style="background: ${currentClient.accentColor}">
+              ${currentClient.phones.find(p => p.isPrimaryCta).ctaText}
+            </a>
+          </div>
+        ` : ''}
+      `;
+      
+      // Mostrar detalles
+      clientDetails.classList.remove('hidden');
+    }
+    
+    // Mostrar formulario de edición
+    function showEditForm() {
+      if (!currentClient) return;
+      
+      // Llenar formulario con datos actuales
+      document.getElementById('editId').value = currentClient.id;
+      document.getElementById('editName').value = currentClient.name;
+      document.getElementById('editSlogan').value = currentClient.slogan;
+      document.getElementById('editAbout').value = currentClient.about;
+      editPrimaryColor.value = currentClient.primaryColor;
+      editPrimaryColorText.value = currentClient.primaryColor;
+      editAccentColor.value = currentClient.accentColor;
+      editAccentColorText.value = currentClient.accentColor;
+      document.getElementById('editLocation').value = currentClient.location;
+      document.getElementById('editMapsLink').value = currentClient.mapsLink;
+      document.getElementById('editCategory').value = currentClient.category;
+      document.getElementById('editType').value = currentClient.type;
+      
+      // Mostrar formulario
+      clientDetails.classList.add('hidden');
+      editForm.classList.remove('hidden');
+    }
+    
+    // Guardar cambios del cliente
+    function saveClientChanges(e) {
+      e.preventDefault();
+      
+      if (!currentClient) return;
+      
+      // Actualizar datos del cliente
+      currentClient.name = document.getElementById('editName').value;
+      currentClient.slogan = document.getElementById('editSlogan').value;
+      currentClient.about = document.getElementById('editAbout').value;
+      currentClient.primaryColor = editPrimaryColor.value;
+      currentClient.accentColor = editAccentColor.value;
+      currentClient.location = document.getElementById('editLocation').value;
+      currentClient.mapsLink = document.getElementById('editMapsLink').value;
+      currentClient.category = document.getElementById('editCategory').value;
+      currentClient.type = document.getElementById('editType').value;
+      
+      // Actualizar lista y detalles
+      renderClientList(clients);
+      showClientDetails(currentClient.id);
+      
+      // Ocultar formulario
+      editForm.classList.add('hidden');
+      
+      // Aquí podrías agregar código para guardar los cambios en el servidor
+      alert('Cambios guardados (en memoria). Nota: Para persistir los cambios, necesitarías implementar el guardado en el servidor).');
+    }
+    
+    // Buscar clientes
+    function searchClients() {
+      const searchTerm = searchInput.value.toLowerCase();
+      if (!searchTerm) {
+        renderClientList(clients);
+        return;
+      }
+      
+      const filteredClients = clients.filter(client => 
+        client.name.toLowerCase().includes(searchTerm) || 
+        client.slogan.toLowerCase().includes(searchTerm) || 
+        client.category.toLowerCase().includes(searchTerm) ||
+        client.location.toLowerCase().includes(searchTerm) ||
+        client.about.toLowerCase().includes(searchTerm)
+      );
+      
+      renderClientList(filteredClients);
+    }
+    
+    // Helper para obtener iniciales
+    function getInitials(name) {
+      return name.split(' ')
+        .map(word => word[0])
+        .join('')
+        .toUpperCase()
+        .substring(0, 2);
+    }
+    
+    // Sincronizar inputs de color
+    function syncColorInputs() {
+      editPrimaryColor.addEventListener('input', () => {
+        editPrimaryColorText.value = editPrimaryColor.value;
+      });
+      
+      editPrimaryColorText.addEventListener('input', () => {
+        if (/^#[0-9A-F]{6}$/i.test(editPrimaryColorText.value)) {
+          editPrimaryColor.value = editPrimaryColorText.value;
+        }
+      });
+      
+      editAccentColor.addEventListener('input', () => {
+        editAccentColorText.value = editAccentColor.value;
+      });
+      
+      editAccentColorText.addEventListener('input', () => {
+        if (/^#[0-9A-F]{6}$/i.test(editAccentColorText.value)) {
+          editAccentColor.value = editAccentColorText.value;
+        }
+      });
+    }
+    
+    // Event listeners
+    closeDetails.addEventListener('click', () => {
+      clientDetails.classList.add('hidden');
+    });
+    
+    editClient.addEventListener('click', showEditForm);
+    
+    clientForm.addEventListener('submit', saveClientChanges);
+    
+    cancelEdit.addEventListener('click', () => {
+      editForm.classList.add('hidden');
+      clientDetails.classList.remove('hidden');
+    });
+    
+    closeEdit.addEventListener('click', () => {
+      editForm.classList.add('hidden');
+    });
+    
+    searchBtn.addEventListener('click', searchClients);
+    
+    searchInput.addEventListener('keyup', (e) => {
+      if (e.key === 'Enter') {
+        searchClients();
+      }
+    });
+    
+    // Inicializar
+    document.addEventListener('DOMContentLoaded', () => {
+      loadClients();
+      syncColorInputs();
+    });
+  </script>
 </body>
 </html>
