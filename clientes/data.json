@@ -1226,28 +1226,28 @@
     "services": [
       {
         "name": "Construcción",
-        "icon": "",
+        "icon": "maki:construction",
         "image": "https://www.gremiconstrucciobaixcamp.cat/we2_images/1711382989.jpg",
         "description": "Servicios completos de construcción desde cimientos hasta acabados finales. Proyectos residenciales y comerciales con los más altos estándares de calidad.",
         "price": null
       },
       {
         "name": "Drywall",
-        "icon": "",
+        "icon": "mdi:wall",
         "image": "https://cdn-insofast.b-cdn.net/wp-content/uploads/insofast-installing-drywall.jpg",
         "description": "Instalación profesional de drywall para divisiones interiores, techos y diseños especiales. Trabajos limpios, precisos y con garantía.",
         "price": null
       },
       {
         "name": "Electricidad",
-        "icon": "",
+        "icon": "mdi:flash",
         "image": "https://www.serviciodeelectricidad.com/wp-content/uploads/Electricistas-En-Ate-Electricista-De-Emergencia-En-Ate-Tecnico-Electricista-A-Domicilio-En-Ate-Instalacion-Electrica-En-Ate-Cableado-Electrico-En-Ate.png",
         "description": "Instalaciones eléctricas seguras y eficientes. Desde cableado básico hasta sistemas complejos, cumpliendo con todas las normativas vigentes.",
         "price": null
       },
       {
         "name": "Pintura",
-        "icon": "",
+        "icon": "mdi:format-paint",
         "image": "https://services360.com.pe/wp-content/uploads/2022/04/pintura.jpg",
         "description": "Servicios profesionales de pintura en interiores y exteriores. Aplicación de pinturas de alta calidad con técnicas modernas y acabados perfectos.",
         "price": null
@@ -1280,19 +1280,19 @@
     "reliabilityScore": 75,
     "whyChooseUs": [
       {
-        "icon": "",
+        "icon": "mdi:certificate",
         "title": "Profesionales certificados",
-        "text": ""
+        "text": "Contamos con técnicos especializados y certificados en cada área."
       },
       {
-        "icon": "",
+        "icon": "mdi:shield-star",
         "title": "Materiales de primera calidad",
-        "text": ""
+        "text": "Usamos insumos de marcas reconocidas y proveedores confiables."
       },
       {
-        "icon": "",
+        "icon": "mdi:shield-check",
         "title": "Garantía en todos nuestros trabajos",
-        "text": ""
+        "text": "Ofrecemos garantía escrita en todos nuestros servicios, respaldando la calidad."
       }
     ],
     "platformName": "Mercado Digital",
