@@ -1151,5 +1151,153 @@
     "category": "Topografía",
     "type": "Empresa",
     "gender": "Femenino"
+  },
+  {
+    "id": "tapi-mundo",
+    "name": "Tapi Mundo",
+    "slogan": "Destapamos lo mejor, enroscamos seguridad",
+    "services": [
+      {
+        "name": "Fabricación de tapas pilfer",
+        "icon": "mdi:factory",
+        "image": "../../../admin/clientes/multimedia/tapi-mundo/fabricacion.png",
+        "description": "Fabricamos tapas pilfer de alta calidad en diversos colores: negro, blanco, verde y dorado. Garantizamos seguridad y durabilidad para tus productos.",
+        "price": null
+      },
+      {
+        "name": "Personalización de tapas pilfer",
+        "icon": "mdi:printer-3d",
+        "image": "../../../admin/clientes/multimedia/tapi-mundo/personalizacion.png",
+        "description": "Personalizamos tus tapas pilfer con logos, textos o diseños exclusivos. Disponible en colores negro, blanco, verde y dorado para que combines con tu marca.",
+        "price": null
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 921 492 814",
+        "whatsapp": "51921492814",
+        "isPrimaryCta": true,
+        "ctaText": "¡Chatea con nosotros!"
+      }
+    ],
+    "emails": [
+      "tapimundoperu@gmail.com"
+    ],
+    "facebook": "https://www.facebook.com/profile.php?id=61573733201641",
+    "instagram": "https://www.instagram.com/tapimundooficial",
+    "tiktok": "https://www.tiktok.com/@tapimundo",
+    "youtube": "https://www.youtube.com/@tapimundooficial",
+    "website": "../../espacio/tapi-mundo/brochure/",
+    "brochure": "../../espacio/tapi-mundo/brochure/",
+    "card": "../../espacio/tapi-mundo/card/",
+    "link": "../../espacio/tapi-mundo/link",
+    "location": "Lima y provincia",
+    "mapsLink": "https://maps.app.goo.gl/D8TqfiHxsDZEMB9V8",
+    "primaryColor": "#20263B",
+    "accentColor": "#F2F2F2",
+    "about": "Nos especializamos en tapas pilfer de alta calidad, ofreciendo soluciones seguras para el cierre de envases. Usamos materiales resistentes y tecnología avanzada para garantizar protección contra manipulaciones.",
+    "reliabilityScore": 100,
+    "whyChooseUs": [
+      {
+        "icon": "mdi:shield-check",
+        "title": "Calidad Garantizada",
+        "text": "Nuestras tapas pasan rigurosos controles de calidad para asegurar máxima protección."
+      },
+      {
+        "icon": "mdi:palette",
+        "title": "Variedad de Colores",
+        "text": "Ofrecemos tapas en negro, blanco, verde y dorado para adaptarnos a tu branding."
+      },
+      {
+        "icon": "mdi:clock-fast",
+        "title": "Entrega Rápida",
+        "text": "Cumplimos con los plazos de entrega más exigentes sin comprometer la calidad."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Tapas",
+    "type": "Empresa",
+    "gender": "Femenino"
+  },
+  {
+    "id": "sarych",
+    "name": "Sarych",
+    "slogan": "Soluciones profesionales para tus necesidades de construcción y remodelación",
+    "services": [
+      {
+        "name": "Construcción",
+        "icon": "",
+        "image": "https://www.gremiconstrucciobaixcamp.cat/we2_images/1711382989.jpg",
+        "description": "Servicios completos de construcción desde cimientos hasta acabados finales. Proyectos residenciales y comerciales con los más altos estándares de calidad.",
+        "price": null
+      },
+      {
+        "name": "Drywall",
+        "icon": "",
+        "image": "https://cdn-insofast.b-cdn.net/wp-content/uploads/insofast-installing-drywall.jpg",
+        "description": "Instalación profesional de drywall para divisiones interiores, techos y diseños especiales. Trabajos limpios, precisos y con garantía.",
+        "price": null
+      },
+      {
+        "name": "Electricidad",
+        "icon": "",
+        "image": "https://www.serviciodeelectricidad.com/wp-content/uploads/Electricistas-En-Ate-Electricista-De-Emergencia-En-Ate-Tecnico-Electricista-A-Domicilio-En-Ate-Instalacion-Electrica-En-Ate-Cableado-Electrico-En-Ate.png",
+        "description": "Instalaciones eléctricas seguras y eficientes. Desde cableado básico hasta sistemas complejos, cumpliendo con todas las normativas vigentes.",
+        "price": null
+      },
+      {
+        "name": "Pintura",
+        "icon": "",
+        "image": "https://services360.com.pe/wp-content/uploads/2022/04/pintura.jpg",
+        "description": "Servicios profesionales de pintura en interiores y exteriores. Aplicación de pinturas de alta calidad con técnicas modernas y acabados perfectos.",
+        "price": null
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 961 336 409",
+        "whatsapp": "51961336409",
+        "isPrimaryCta": true,
+        "ctaText": "¡Chatea con nosotros!"
+      }
+    ],
+    "emails": [
+      "contacto@sarych.com"
+    ],
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "https://king-pacaya.github.io/web/sarich/",
+    "brochure": "../../espacio/sarych/brochure/",
+    "card": "../../espacio/sarych/card/",
+    "link": "../../espacio/sarych/link",
+    "location": "Lima y provincia",
+    "mapsLink": "https://maps.app.goo.gl/D8TqfiHxsDZEMB9V8",
+    "primaryColor": "#2A4365",
+    "accentColor": "#F6AD55",
+    "about": "SARYCH es una empresa de construcción con más de una década de experiencia en el mercado, trabajando desde el 2010 y especializada en construcción, drywall, electricidad y pintura. Nuestro equipo de profesionales altamente capacitados se compromete a entregar proyectos de alta calidad, cumpliendo con los plazos establecidos y superando las expectativas de nuestros clientes.",
+    "reliabilityScore": 75,
+    "whyChooseUs": [
+      {
+        "icon": "",
+        "title": "Profesionales certificados",
+        "text": ""
+      },
+      {
+        "icon": "",
+        "title": "Materiales de primera calidad",
+        "text": ""
+      },
+      {
+        "icon": "",
+        "title": "Garantía en todos nuestros trabajos",
+        "text": ""
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Tapas",
+    "type": "Empresa",
+    "gender": "Femenino"
   }
 ]
