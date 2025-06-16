@@ -1299,5 +1299,100 @@
     "category": "Tapas",
     "type": "Empresa",
     "gender": "Femenino"
+  },
+  {
+    "id": "markyto",
+    "name": "Markyto Multiservicios",
+    "slogan": "Soluciones integrales para tu hogar",
+    "services": [
+      {
+        "name": "Electrodomésticos",
+        "icon": "mdi:washing-machine",
+        "image": "https://example.com/images/electrodomesticos.png",
+        "description": "Reparación y mantenimiento profesional de todo tipo de electrodomésticos: lavadoras, refrigeradoras, cocinas, microondas y más. Dejamos tus equipos como nuevos.",
+        "price": null
+      },
+      {
+        "name": "Aire Acondicionado",
+        "icon": "mdi:air-conditioner",
+        "image": "https://example.com/images/aire-acondicionado.png",
+        "description": "Instalación, mantenimiento preventivo y correctivo de sistemas de aire acondicionado. Garantizamos un ambiente fresco y confortable en tu espacio.",
+        "price": null
+      },
+      {
+        "name": "Instalaciones de gas residencial",
+        "icon": "mdi:fire",
+        "image": "https://example.com/images/gas-residencial.png",
+        "description": "Instalaciones de gas seguras y certificadas para hogares. Nos encargamos de todo, desde la revisión hasta la implementación de nuevas conexiones.",
+        "price": null
+      },
+      {
+        "name": "Instalaciones eléctricas",
+        "icon": "mdi:flash",
+        "image": "https://example.com/images/electricidad.png",
+        "description": "Servicios eléctricos completos: instalaciones nuevas, reparaciones, mantenimiento, cortocircuitos, cableado y tableros. ¡Tu seguridad es nuestra prioridad!",
+        "price": null
+      },
+      {
+        "name": "Gasfitería",
+        "icon": "mdi:pipe-wrench",
+        "image": "https://example.com/images/gasfiteria.png",
+        "description": "Solución a problemas de gasfitería: fugas de agua, desatoros, instalaciones de griferías, sanitarios y sistemas de tuberías. Servicio rápido y eficaz.",
+        "price": null
+      },
+      {
+        "name": "Trabajos de pintura",
+        "icon": "mdi:format-paint",
+        "image": "https://example.com/images/pintura.png",
+        "description": "Servicios de pintura interior y exterior para renovar tus espacios. Acabados de alta calidad con pinturas duraderas y profesionales.",
+        "price": null
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 967 626 428",
+        "whatsapp": "51967626428",
+        "isPrimaryCta": true,
+        "ctaText": "¡Chatea con nosotros!"
+      }
+    ],
+    "emails": [
+      "tecnicomarkyto@gmail.com"
+    ],
+    "facebook": "https://www.facebook.com/MarkytoMultiservicios",
+    "instagram": "https://www.instagram.com/markytomultiservicios/",
+    "tiktok": "",
+    "youtube": "",
+    "website": "",
+    "brochure": "",
+    "card": "../../espacio/sarych/card/",
+    "link": "",
+    "location": "Colina 653 Bellavista callao",
+    "mapsLink": "https://maps.app.goo.gl/VDpu4FTrr5vbi3Pv6",
+    "primaryColor": "#0D0D0D",
+    "accentColor": "#F18A4F",
+    "about": "Markyto Multiservicios es tu aliado de confianza para el mantenimiento y mejora de tu hogar o negocio. Ofrecemos una amplia gama de servicios especializados, desde la reparación de electrodomésticos y sistemas de aire acondicionado, hasta instalaciones de gas, electricidad, gasfitería y trabajos de pintura.",
+    "reliabilityScore": 85,
+    "whyChooseUs": [
+      {
+        "icon": "mdi:handshake-outline",
+        "title": "Servicio Integral",
+        "text": "Cubrimos todas tus necesidades de mantenimiento y reparación en un solo lugar, ahorrándote tiempo y esfuerzo."
+      },
+      {
+        "icon": "mdi:account-hard-hat",
+        "title": "Expertos Calificados",
+        "text": "Contamos con un equipo de técnicos especializados y con experiencia en cada área para resultados óptimos."
+      },
+      {
+        "icon": "mdi:calendar-check",
+        "title": "Disponibilidad y Rapidez",
+        "text": "Atendemos tus requerimientos de forma ágil y eficiente, porque sabemos que tu tiempo es valioso."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Servicios Generales",
+    "type": "Técnico",
+    "gender": "Masculino"
   }
 ]
