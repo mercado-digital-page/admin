@@ -1394,5 +1394,65 @@
     "category": "Servicios Generales",
     "type": "Técnico",
     "gender": "Masculino"
+  },
+  {
+    "id": "limpet",
+    "name": "Grupo Limpet",
+    "slogan": "Impecables y Confiables.",
+    "services": [
+      {
+        "name": "Limpieza Integral de Oficinas y Espacios Comerciales",
+        "icon": "pixelarticons:building",
+        "image": "",
+        "description": "Ofrecemos un servicio de limpieza profesional y completo para oficinas, locales comerciales y espacios corporativos. Nuestro equipo altamente capacitado garantiza ambientes impecables y saludables, utilizando productos de calidad y técnicas eficientes. Adaptamos nuestros servicios a sus necesidades específicas, creando un entorno de trabajo productivo y agradable.",
+        "price": null
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 936 772 768",
+        "whatsapp": "51936772768",
+        "isPrimaryCta": true,
+        "ctaText": "¡Chatea con nosotros!"
+      }
+    ],
+    "emails": [
+      "limpet.servicios1@gmail.com"
+    ],
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "",
+    "brochure": "",
+    "card": "",
+    "link": "",
+    "location": "San Antonio Miraflores",
+    "mapsLink": "https://maps.app.goo.gl/wFDExvUc2Vsvx6Sf8",
+    "primaryColor": "#0A6B3C",
+    "accentColor": "#7BD30F",
+    "about": "En Grupo Limpet, transformamos espacios con limpieza profesional. Con años de experiencia, somos sinónimo de calidad y confianza en Lima, superando expectativas con soluciones a medida que garantizan ambientes impecables y productivos.",
+    "reliabilityScore": 85,
+    "whyChooseUs": [
+      {
+        "icon": "solar:shield-check-bold",
+        "title": "Calidad Garantizada",
+        "text": "Nos comprometemos con estándares de limpieza superiores, utilizando productos y técnicas avanzadas para asegurar resultados impecables en cada servicio."
+      },
+      {
+        "icon": "fluent:people-team-24-filled",
+        "title": "Equipo Profesional",
+        "text": "Contamos con personal altamente capacitado, con experiencia y dedicado, que trabaja con eficiencia y discreción para satisfacer sus necesidades."
+      },
+      {
+        "icon": "solar:calendar-tick-bold",
+        "title": "Flexibilidad y Adaptabilidad",
+        "text": "Ofrecemos planes de limpieza personalizados que se ajustan a su horario y requerimientos específicos, minimizando interrupciones en su jornada laboral."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Limpieza",
+    "type": "Grupo",
+    "gender": "Masculino"
   }
 ]
