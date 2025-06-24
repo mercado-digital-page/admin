@@ -1454,5 +1454,69 @@
     "category": "Limpieza",
     "type": "Grupo",
     "gender": "Masculino"
+  },
+  {
+    "id": "ayala",
+    "name": "Inmobiliaria Ayala",
+    "slogan": "Honradez y Trabajo Seguro",
+    "services": [
+      {
+        "name": "Diseño y Remodelación de Interiores",
+        "icon": "mdi:design",
+        "image": "",
+        "description": "Transformamos tus espacios en ambientes funcionales, estéticos y personalizados. Ofrecemos servicios completos de diseño y remodelación para hogares y negocios, desde la conceptualización hasta la ejecución, asegurando acabados de alta calidad y soluciones innovadoras que reflejan tu estilo y necesidades.",
+        "price": null
+      }
+    ],
+    "phones": [
+      {
+        "number": "+51 904 543 330",
+        "whatsapp": "51904543330",
+        "isPrimaryCta": true,
+        "ctaText": "¡Conoce nuestros diseños!"
+      },
+      {
+        "number": "+51 984 440 374",
+        "whatsapp": "51984440374",
+        "isPrimaryCta": false,
+        "ctaText": null
+      }
+    ],
+    "emails": [],
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "website": "",
+    "brochure": "",
+    "card": "",
+    "link": "",
+    "location": "Cusco, Perú",
+    "mapsLink": "https://maps.app.goo.gl/obmBa4ReCbFAfdoz9",
+    "primaryColor": "#0D0D0D",
+    "accentColor": "#EFB810",
+    "about": "Inmobiliaria Ayala: Convertimos tus sueños en espacios. Diseñamos y remodelamos ambientes que inspiran, con honradez y seguridad. Reflejamos tu estilo en cada proyecto en Cusco, Perú.",
+    "reliabilityScore": 90,
+    "whyChooseUs": [
+      {
+        "icon": "icon-park-solid:integrity",
+        "title": "Honradez Garantizada",
+        "text": "Nuestra base es la transparencia y la honestidad en cada etapa del proyecto, asegurando confianza y tranquilidad en cada decisión."
+      },
+      {
+        "icon": "pepicons-pop:diamond-print",
+        "title": "Diseños Exclusivos",
+        "text": "Creamos soluciones únicas y personalizadas, fusionando tus ideas con nuestra experiencia para lograr ambientes que superen tus expectativas."
+      },
+      {
+        "icon": "fluent:handshake-24-filled",
+        "title": "Compromiso Seguro",
+        "text": "Trabajamos con dedicación y profesionalismo para entregar proyectos de alta calidad, cumpliendo plazos y presupuestos establecidos."
+      }
+    ],
+    "platformName": "Mercado Digital",
+    "category": "Inmobiliaria",
+    "type": "Empresa",
+    "gender": "Femenino"
   }
 ]
